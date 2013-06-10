@@ -1,0 +1,102 @@
+Release 12.4 - xst M.81d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: toplevel.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "toplevel.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "toplevel"
+Output Format                      : NGC
+Target Device                      : CoolRunner2 CPLDs
+
+---- Source Options
+Top Module Name                    : toplevel
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/VHDL_Codes/parity4bit.vhd" in Library work.
+Entity <parity4bit> compiled.
+Entity <parity4bit> (Architecture <beh>) compiled.
+Compiling vhdl file "D:/VHDL_Codes/parcheck.vhd" in Library work.
+Entity <parcheck> compiled.
+Entity <parcheck> (Architecture <beh>) compiled.
+Compiling vhdl file "D:/VHDL_Codes/sg.vhd" in Library work.
+Entity <sg> compiled.
+ERROR:HDLParsers:1015 - "D:/VHDL_Codes/sg.vhd" Line 42. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "D:/VHDL_Codes/sg.vhd" Line 44. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "D:/VHDL_Codes/sg.vhd" Line 45. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "D:/VHDL_Codes/sg.vhd" Line 49. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "D:/VHDL_Codes/sg.vhd" Line 53. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "D:/VHDL_Codes/sg.vhd" Line 64. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "D:/VHDL_Codes/sg.vhd" Line 67. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "D:/VHDL_Codes/sg.vhd" Line 69. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "D:/VHDL_Codes/sg.vhd" Line 80. Wait for statement unsupported.
+--> 
+
+Total memory usage is 182056 kilobytes
+
+Number of errors   :    9 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

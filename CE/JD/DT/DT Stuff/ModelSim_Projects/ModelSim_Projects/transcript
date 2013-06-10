@@ -1,0 +1,449 @@
+# Reading C:/Modeltech_6.3j/tcl/vsim/pref.tcl 
+# //  ModelSim SE 6.3j Oct 30 2008 
+# //
+# //  Copyright 1991-2008 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading project Aufgabe2
+# Compile of parity.vhd was successful.
+# Compile of parcheck.vhd was successful.
+# Compile of sig2par.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd failed with 1 errors.
+# Compile of toplevel.vhd failed with 1 errors.
+# 7 compiles, 3 failed with 3 errors. 
+# Compile of parity.vhd was successful.
+# Compile of parcheck.vhd was successful.
+# Compile of sig2par.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd failed with 1 errors.
+# 7 compiles, 2 failed with 2 errors. 
+# Compile of parity.vhd was successful.
+# Compile of parcheck.vhd was successful.
+# Compile of sig2par.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd failed with 1 errors.
+# 7 compiles, 2 failed with 2 errors. 
+# Compile of parity.vhd was successful.
+# Compile of parcheck.vhd was successful.
+# Compile of sig2par.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd failed with 1 errors.
+# 7 compiles, 2 failed with 2 errors. 
+# Compile of parity.vhd was successful.
+# Compile of parcheck.vhd was successful.
+# Compile of sig2par.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd failed with 1 errors.
+# 7 compiles, 2 failed with 2 errors. 
+# Compile of parity.vhd was successful.
+# Compile of parcheck.vhd was successful.
+# Compile of sig2par.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd failed with 1 errors.
+# 7 compiles, 2 failed with 2 errors. 
+# Compile of parity.vhd was successful.
+# Compile of parcheck.vhd was successful.
+# Compile of sig2par.vhd was successful.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd failed with 1 errors.
+# 7 compiles, 1 failed with 1 error. 
+# Compile of parity.vhd was successful.
+# Compile of parcheck.vhd was successful.
+# Compile of sig2par.vhd was successful.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+# Compile of parity.vhd was successful.
+# Compile of parity4bit.vhd failed with 1 errors.
+# Compile of parity4bit.vhd failed with 1 errors.
+# Compile of parity4bit.vhd was successful.
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of parcheck.vhd was successful.
+# Compile of parcheck.vhd was successful.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd was successful.
+# 6 compiles, 0 failed with no errors. 
+# Optimization canceled
+vsim work.toplevel
+# vsim work.toplevel 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: D:/VHDL_Codes/DUT.vhd(63): Bad default binding for component instance "p1 : parcheck".
+#  (Component port "sigx" is not on the entity.)
+# ** Warning: [1] D:/VHDL_Codes/DUT.vhd(63): (vopt-3473) Component instance "p1 : parcheck" is not bound.
+# Optimization failed
+# Error loading design
+# Compile of parcheck.vhd was successful.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd was successful.
+# 6 compiles, 0 failed with no errors. 
+vsim work.toplevel
+# vsim work.toplevel 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.toplevel(beh)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.sg(beh)
+# Loading work.dut(beh)
+# Loading work.parity4bit(beh)
+# Loading work.parcheck(beh)
+add wave -r /*
+run -all
+# Compile of parcheck.vhd was successful.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd was successful.
+# 6 compiles, 0 failed with no errors. 
+vsim work.toplevel
+# vsim work.toplevel 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.toplevel(beh)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.sg(beh)
+# Loading work.dut(beh)
+# Loading work.parity4bit(beh)
+# Loading work.parcheck(beh)
+add wave -r /*
+run -all
+# Compile of parcheck.vhd was successful.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd failed with 1 errors.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd was successful.
+# 6 compiles, 1 failed with 1 error. 
+# Compile of parcheck.vhd was successful.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd was successful.
+# 6 compiles, 0 failed with no errors. 
+vsim work.toplevel
+# vsim work.toplevel 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.toplevel(beh)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.sg(beh)
+# Loading work.dut(beh)
+# Loading work.parity4bit(beh)
+# Loading work.parcheck(beh)
+add wave -r /*
+run -all
+# Load canceled
+# Compile of parcheck.vhd was successful.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd was successful.
+# 6 compiles, 0 failed with no errors. 
+vsim work.toplevel
+# vsim work.toplevel 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.toplevel(beh)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.sg(beh)
+# Loading work.dut(beh)
+# Loading work.parity4bit(beh)
+# Loading work.parcheck(beh)
+add wave -r /*
+run -all
+# Compile of parcheck.vhd was successful.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd was successful.
+# 6 compiles, 0 failed with no errors. 
+vsim work.toplevel
+# vsim work.toplevel 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.toplevel(beh)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.sg(beh)
+# Loading work.dut(beh)
+# Loading work.parity4bit(beh)
+# Loading work.parcheck(beh)
+add wave -r /*
+run -all
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd failed with 1 errors.
+# 6 compiles, 2 failed with 2 errors. 
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd failed with 2 errors.
+# 6 compiles, 2 failed with 3 errors. 
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd failed with 1 errors.
+# 6 compiles, 2 failed with 2 errors. 
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd failed with 1 errors.
+# 6 compiles, 2 failed with 2 errors. 
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd failed with 2 errors.
+# 6 compiles, 2 failed with 3 errors. 
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd failed with 1 errors.
+# 6 compiles, 2 failed with 2 errors. 
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd failed with 1 errors.
+# 6 compiles, 2 failed with 2 errors. 
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd failed with 1 errors.
+# 6 compiles, 2 failed with 2 errors. 
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd failed with 1 errors.
+# 6 compiles, 2 failed with 2 errors. 
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd failed with 1 errors.
+# 6 compiles, 2 failed with 2 errors. 
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd failed with 2 errors.
+# 6 compiles, 2 failed with 3 errors. 
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd failed with 1 errors.
+# 6 compiles, 2 failed with 2 errors. 
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd failed with 1 errors.
+# 6 compiles, 2 failed with 2 errors. 
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd was successful.
+# 6 compiles, 1 failed with 1 error. 
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd was successful with warnings.
+# 6 compiles, 1 failed with 1 error. 
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd failed with 1 errors.
+# 6 compiles, 2 failed with 2 errors. 
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd was successful with warnings.
+# 6 compiles, 1 failed with 1 error. 
+# Compile of parcheck.vhd failed with 1 errors.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd was successful.
+# 6 compiles, 1 failed with 1 error. 
+# Compile of parcheck.vhd was successful.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd was successful.
+# 6 compiles, 0 failed with no errors. 
+vsim work.toplevel
+# vsim work.toplevel 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.toplevel(beh)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.sg(beh)
+# Loading work.dut(beh)
+# Loading work.parity4bit(beh)
+# Loading work.parcheck(beh)
+add wave -r /*
+run -all
+# Compile of parcheck.vhd was successful.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd was successful.
+# 6 compiles, 0 failed with no errors. 
+vsim work.toplevel
+# vsim work.toplevel 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.toplevel(beh)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.sg(beh)
+# Loading work.dut(beh)
+# Loading work.parity4bit(beh)
+# Loading work.parcheck(beh)
+add wave -r /*
+run -all
+vsim work.toplevel
+# vsim work.toplevel 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.toplevel(beh)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.sg(beh)
+# Loading work.dut(beh)
+# Loading work.parity4bit(beh)
+# Loading work.parcheck(beh)
+add wave sim:/toplevel/dut_i/*
+run -all
+add wave sim:/toplevel/sg_i/*
+# Compile of parcheck.vhd was successful.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd was successful.
+# 6 compiles, 0 failed with no errors. 
+# Optimization canceled
+vsim work.toplevel
+# vsim work.toplevel 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.toplevel(beh)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.sg(beh)
+# Loading work.dut(beh)
+# Loading work.parity4bit(beh)
+# Loading work.parcheck(beh)
+add wave sim:/toplevel/dut_i/*
+add wave sim:/toplevel/sg_i/*
+run -all
+# Compile of parcheck.vhd was successful.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd was successful.
+# 6 compiles, 0 failed with no errors. 
+# Compile of parcheck.vhd was successful.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd failed with 1 errors.
+# 6 compiles, 1 failed with 1 error. 
+# Compile of parcheck.vhd was successful.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd failed with 1 errors.
+# 6 compiles, 1 failed with 1 error. 
+# Compile of parcheck.vhd was successful.
+# Compile of signalgen.vhd was successful.
+# Compile of DUT.vhd was successful.
+# Compile of sg.vhd was successful.
+# Compile of toplevel.vhd was successful.
+# Compile of parity4bit.vhd was successful.
+# 6 compiles, 0 failed with no errors. 

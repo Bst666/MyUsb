@@ -1,0 +1,5 @@
+vhdl work "../../VHDL_Codes/parity4bit.vhd"
+vhdl work "../../VHDL_Codes/parcheck.vhd"
+vhdl work "../../VHDL_Codes/sg.vhd"
+vhdl work "../../VHDL_Codes/DUT.vhd"
+vhdl work "../../VHDL_Codes/toplevel.vhd"

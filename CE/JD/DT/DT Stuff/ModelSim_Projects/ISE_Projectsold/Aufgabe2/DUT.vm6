@@ -1,0 +1,825 @@
+NDS Database:  version M.81d
+
+NDS_INFO | xbr | 2C256208 | XC2C256-7-PQ208
+
+DEVICE | 2C256 | 2C256208 | 
+
+NETWORK | DUT | 0 | 0 | 1073758214 | 0
+
+INPUT_INSTANCE | 0 | 0 | NULL | clk_II | DUT_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | clk | 1164 | PI | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 3 | 5 | II_FCLK
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+
+INPUT_INSTANCE | 0 | 0 | NULL | nres_II | DUT_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | nres | 1165 | PI | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldLow | ok_MC | DUT_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p1/ok_s | 1170 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p1/ok_s_MC.Q | p1/ok_s_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | ok_MC.Q | 1223 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | ok_MC.Q | ok_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | ok_MC.SI | ok_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p1/ok_s | 1170 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p1/ok_s_MC.Q | p1/ok_s_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | ok_MC.D1 | 1167 | ? | 0 | 0 | ok_MC | NULL | NULL | ok_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p1/ok_s
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | ok_MC.D2 | 1168 | ? | 0 | 0 | ok_MC | NULL | NULL | ok_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | ok_MC.REG | ok_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | ok_MC.D | 1166 | ? | 0 | 0 | ok_MC | NULL | NULL | ok_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | ok_MC.Q | 1222 | ? | 0 | 0 | ok_MC | NULL | NULL | ok_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | p1/ok_s_MC | DUT_COPY_0_COPY_0 | 1024 | 6 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<0> | 1175 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<0>_MC.Q | sigx_s<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<1> | 1183 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<1>_MC.Q | sigx_s<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<2> | 1190 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<2>_MC.Q | sigx_s<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<3> | 1197 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<3>_MC.Q | sigx_s<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<4> | 1204 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<4>_MC.Q | sigx_s<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | p1/ok_s | 1170 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p1/ok_s_MC.Q | p1/ok_s_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | p1/ok_s_MC.SI | p1/ok_s_MC | 0 | 5 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<0> | 1175 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<0>_MC.Q | sigx_s<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<1> | 1183 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<1>_MC.Q | sigx_s<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<2> | 1190 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<2>_MC.Q | sigx_s<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<3> | 1197 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<3>_MC.Q | sigx_s<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<4> | 1204 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<4>_MC.Q | sigx_s<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | p1/ok_s_MC.D1 | 1173 | ? | 0 | 0 | p1/ok_s_MC | NULL | NULL | p1/ok_s_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | sigx_s<0>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | p1/ok_s_MC.D2 | 1174 | ? | 0 | 0 | p1/ok_s_MC | NULL | NULL | p1/ok_s_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_TRUE | sigx_s<1> | IV_TRUE | sigx_s<2> | IV_TRUE | sigx_s<3> | IV_FALSE | sigx_s<4>
+SPPTERM | 4 | IV_TRUE | sigx_s<1> | IV_TRUE | sigx_s<2> | IV_FALSE | sigx_s<3> | IV_TRUE | sigx_s<4>
+SPPTERM | 4 | IV_TRUE | sigx_s<1> | IV_FALSE | sigx_s<2> | IV_TRUE | sigx_s<3> | IV_TRUE | sigx_s<4>
+SPPTERM | 4 | IV_TRUE | sigx_s<1> | IV_FALSE | sigx_s<2> | IV_FALSE | sigx_s<3> | IV_FALSE | sigx_s<4>
+SPPTERM | 4 | IV_FALSE | sigx_s<1> | IV_TRUE | sigx_s<2> | IV_TRUE | sigx_s<3> | IV_TRUE | sigx_s<4>
+SPPTERM | 4 | IV_FALSE | sigx_s<1> | IV_TRUE | sigx_s<2> | IV_FALSE | sigx_s<3> | IV_FALSE | sigx_s<4>
+SPPTERM | 4 | IV_FALSE | sigx_s<1> | IV_FALSE | sigx_s<2> | IV_TRUE | sigx_s<3> | IV_FALSE | sigx_s<4>
+SPPTERM | 4 | IV_FALSE | sigx_s<1> | IV_FALSE | sigx_s<2> | IV_FALSE | sigx_s<3> | IV_TRUE | sigx_s<4>
+
+SRFF_INSTANCE | p1/ok_s_MC.REG | p1/ok_s_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | p1/ok_s_MC.D | 1172 | ? | 0 | 0 | p1/ok_s_MC | NULL | NULL | p1/ok_s_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | p1/ok_s_MC.Q | 1171 | ? | 0 | 0 | p1/ok_s_MC | NULL | NULL | p1/ok_s_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | sigx_s<0>_MC | DUT_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p4bit/sigin_s<0> | 1180 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p4bit/sigin_s<0>_MC.Q | p4bit/sigin_s<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | sigx_s<0> | 1175 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<0>_MC.Q | sigx_s<0>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | sigx_s<0>_MC.SI | sigx_s<0>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p4bit/sigin_s<0> | 1180 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p4bit/sigin_s<0>_MC.Q | p4bit/sigin_s<0>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | sigx_s<0>_MC.D1 | 1178 | ? | 0 | 0 | sigx_s<0>_MC | NULL | NULL | sigx_s<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p4bit/sigin_s<0>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | sigx_s<0>_MC.D2 | 1179 | ? | 0 | 0 | sigx_s<0>_MC | NULL | NULL | sigx_s<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | sigx_s<0>_MC.REG | sigx_s<0>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | sigx_s<0>_MC.D | 1177 | ? | 0 | 0 | sigx_s<0>_MC | NULL | NULL | sigx_s<0>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | sigx_s<0>_MC.Q | 1176 | ? | 0 | 0 | sigx_s<0>_MC | NULL | NULL | sigx_s<0>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | p4bit/sigin_s<0>_MC | DUT_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | txdat<0>_II/IREG | 1269 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<0>_II | 10 | 5 | II_REG
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | p4bit/sigin_s<0> | 1180 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p4bit/sigin_s<0>_MC.Q | p4bit/sigin_s<0>_MC | 1 | 0 | MC_UIM
+
+SRFF_INSTANCE | p4bit/sigin_s<0>_MC.REG | p4bit/sigin_s<0>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | txdat<0>_II/IREG | 1269 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<0>_II | 10 | 5 | II_REG
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | p4bit/sigin_s<0>_MC.Q | 1181 | ? | 0 | 0 | p4bit/sigin_s<0>_MC | NULL | NULL | p4bit/sigin_s<0>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | sigx_s<1>_MC | DUT_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p4bit/sigin_s<1> | 1188 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p4bit/sigin_s<1>_MC.Q | p4bit/sigin_s<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | sigx_s<1> | 1183 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<1>_MC.Q | sigx_s<1>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | sigx_s<1>_MC.SI | sigx_s<1>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p4bit/sigin_s<1> | 1188 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p4bit/sigin_s<1>_MC.Q | p4bit/sigin_s<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | sigx_s<1>_MC.D1 | 1186 | ? | 0 | 0 | sigx_s<1>_MC | NULL | NULL | sigx_s<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p4bit/sigin_s<1>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | sigx_s<1>_MC.D2 | 1187 | ? | 0 | 0 | sigx_s<1>_MC | NULL | NULL | sigx_s<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | sigx_s<1>_MC.REG | sigx_s<1>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | sigx_s<1>_MC.D | 1185 | ? | 0 | 0 | sigx_s<1>_MC | NULL | NULL | sigx_s<1>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | sigx_s<1>_MC.Q | 1184 | ? | 0 | 0 | sigx_s<1>_MC | NULL | NULL | sigx_s<1>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | p4bit/sigin_s<1>_MC | DUT_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | txdat<1>_II/IREG | 1270 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<1>_II | 10 | 5 | II_REG
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | p4bit/sigin_s<1> | 1188 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p4bit/sigin_s<1>_MC.Q | p4bit/sigin_s<1>_MC | 1 | 0 | MC_UIM
+
+SRFF_INSTANCE | p4bit/sigin_s<1>_MC.REG | p4bit/sigin_s<1>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | txdat<1>_II/IREG | 1270 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<1>_II | 10 | 5 | II_REG
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | p4bit/sigin_s<1>_MC.Q | 1189 | ? | 0 | 0 | p4bit/sigin_s<1>_MC | NULL | NULL | p4bit/sigin_s<1>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | sigx_s<2>_MC | DUT_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p4bit/sigin_s<2> | 1195 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p4bit/sigin_s<2>_MC.Q | p4bit/sigin_s<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | sigx_s<2> | 1190 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<2>_MC.Q | sigx_s<2>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | sigx_s<2>_MC.SI | sigx_s<2>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p4bit/sigin_s<2> | 1195 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p4bit/sigin_s<2>_MC.Q | p4bit/sigin_s<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | sigx_s<2>_MC.D1 | 1193 | ? | 0 | 0 | sigx_s<2>_MC | NULL | NULL | sigx_s<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p4bit/sigin_s<2>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | sigx_s<2>_MC.D2 | 1194 | ? | 0 | 0 | sigx_s<2>_MC | NULL | NULL | sigx_s<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | sigx_s<2>_MC.REG | sigx_s<2>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | sigx_s<2>_MC.D | 1192 | ? | 0 | 0 | sigx_s<2>_MC | NULL | NULL | sigx_s<2>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | sigx_s<2>_MC.Q | 1191 | ? | 0 | 0 | sigx_s<2>_MC | NULL | NULL | sigx_s<2>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | p4bit/sigin_s<2>_MC | DUT_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | txdat<2>_II/IREG | 1271 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<2>_II | 10 | 5 | II_REG
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | p4bit/sigin_s<2> | 1195 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p4bit/sigin_s<2>_MC.Q | p4bit/sigin_s<2>_MC | 1 | 0 | MC_UIM
+
+SRFF_INSTANCE | p4bit/sigin_s<2>_MC.REG | p4bit/sigin_s<2>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | txdat<2>_II/IREG | 1271 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<2>_II | 10 | 5 | II_REG
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | p4bit/sigin_s<2>_MC.Q | 1196 | ? | 0 | 0 | p4bit/sigin_s<2>_MC | NULL | NULL | p4bit/sigin_s<2>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | sigx_s<3>_MC | DUT_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p4bit/sigin_s<3> | 1202 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p4bit/sigin_s<3>_MC.Q | p4bit/sigin_s<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | sigx_s<3> | 1197 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<3>_MC.Q | sigx_s<3>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | sigx_s<3>_MC.SI | sigx_s<3>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p4bit/sigin_s<3> | 1202 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p4bit/sigin_s<3>_MC.Q | p4bit/sigin_s<3>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | sigx_s<3>_MC.D1 | 1200 | ? | 0 | 0 | sigx_s<3>_MC | NULL | NULL | sigx_s<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p4bit/sigin_s<3>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | sigx_s<3>_MC.D2 | 1201 | ? | 0 | 0 | sigx_s<3>_MC | NULL | NULL | sigx_s<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | sigx_s<3>_MC.REG | sigx_s<3>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | sigx_s<3>_MC.D | 1199 | ? | 0 | 0 | sigx_s<3>_MC | NULL | NULL | sigx_s<3>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | sigx_s<3>_MC.Q | 1198 | ? | 0 | 0 | sigx_s<3>_MC | NULL | NULL | sigx_s<3>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | p4bit/sigin_s<3>_MC | DUT_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | txdat<3>_II/IREG | 1272 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<3>_II | 10 | 5 | II_REG
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | p4bit/sigin_s<3> | 1202 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p4bit/sigin_s<3>_MC.Q | p4bit/sigin_s<3>_MC | 1 | 0 | MC_UIM
+
+SRFF_INSTANCE | p4bit/sigin_s<3>_MC.REG | p4bit/sigin_s<3>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | txdat<3>_II/IREG | 1272 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<3>_II | 10 | 5 | II_REG
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | p4bit/sigin_s<3>_MC.Q | 1203 | ? | 0 | 0 | p4bit/sigin_s<3>_MC | NULL | NULL | p4bit/sigin_s<3>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | sigx_s<4>_MC | DUT_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p4bit/sigin_s<4> | 1209 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p4bit/sigin_s<4>_MC.Q | p4bit/sigin_s<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | sigx_s<4> | 1204 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<4>_MC.Q | sigx_s<4>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | sigx_s<4>_MC.SI | sigx_s<4>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p4bit/sigin_s<4> | 1209 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p4bit/sigin_s<4>_MC.Q | p4bit/sigin_s<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | sigx_s<4>_MC.D1 | 1207 | ? | 0 | 0 | sigx_s<4>_MC | NULL | NULL | sigx_s<4>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p4bit/sigin_s<4>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | sigx_s<4>_MC.D2 | 1208 | ? | 0 | 0 | sigx_s<4>_MC | NULL | NULL | sigx_s<4>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | sigx_s<4>_MC.REG | sigx_s<4>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | sigx_s<4>_MC.D | 1206 | ? | 0 | 0 | sigx_s<4>_MC | NULL | NULL | sigx_s<4>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | sigx_s<4>_MC.Q | 1205 | ? | 0 | 0 | sigx_s<4>_MC | NULL | NULL | sigx_s<4>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | p4bit/sigin_s<4>_MC | DUT_COPY_0_COPY_0 | 1024 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | txdat<3>_II/UIM | 1215 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | txdat<2>_II/UIM | 1217 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | txdat<1>_II/UIM | 1219 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | txdat<0>_II/UIM | 1221 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | p4bit/sigin_s<4> | 1209 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p4bit/sigin_s<4>_MC.Q | p4bit/sigin_s<4>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | p4bit/sigin_s<4>_MC.SI | p4bit/sigin_s<4>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | txdat<3>_II/UIM | 1215 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | txdat<2>_II/UIM | 1217 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | txdat<1>_II/UIM | 1219 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | txdat<0>_II/UIM | 1221 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | p4bit/sigin_s<4>_MC.D1 | 1212 | ? | 0 | 0 | p4bit/sigin_s<4>_MC | NULL | NULL | p4bit/sigin_s<4>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | txdat<3>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | p4bit/sigin_s<4>_MC.D2 | 1213 | ? | 0 | 0 | p4bit/sigin_s<4>_MC | NULL | NULL | p4bit/sigin_s<4>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | txdat<2>_II/UIM | IV_TRUE | txdat<1>_II/UIM | IV_FALSE | txdat<0>_II/UIM
+SPPTERM | 3 | IV_TRUE | txdat<2>_II/UIM | IV_FALSE | txdat<1>_II/UIM | IV_TRUE | txdat<0>_II/UIM
+SPPTERM | 3 | IV_FALSE | txdat<2>_II/UIM | IV_TRUE | txdat<1>_II/UIM | IV_TRUE | txdat<0>_II/UIM
+SPPTERM | 3 | IV_FALSE | txdat<2>_II/UIM | IV_FALSE | txdat<1>_II/UIM | IV_FALSE | txdat<0>_II/UIM
+
+SRFF_INSTANCE | p4bit/sigin_s<4>_MC.REG | p4bit/sigin_s<4>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | p4bit/sigin_s<4>_MC.D | 1211 | ? | 0 | 0 | p4bit/sigin_s<4>_MC | NULL | NULL | p4bit/sigin_s<4>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | p4bit/sigin_s<4>_MC.Q | 1210 | ? | 0 | 0 | p4bit/sigin_s<4>_MC | NULL | NULL | p4bit/sigin_s<4>_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | txdat<3>_II | DUT_COPY_0_COPY_0 | 16 | 1 | 2
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | txdat<3> | 1214 | PI | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | txdat<3>_II/UIM | 1215 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<3>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 10 | 5 | II_REG
+NODE | txdat<3>_II/IREG | 1272 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<3>_II | 10 | 5 | II_REG
+
+INPUT_INSTANCE | 0 | 0 | NULL | txdat<2>_II | DUT_COPY_0_COPY_0 | 16 | 1 | 2
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | txdat<2> | 1216 | PI | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | txdat<2>_II/UIM | 1217 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<2>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 10 | 5 | II_REG
+NODE | txdat<2>_II/IREG | 1271 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<2>_II | 10 | 5 | II_REG
+
+INPUT_INSTANCE | 0 | 0 | NULL | txdat<1>_II | DUT_COPY_0_COPY_0 | 16 | 1 | 2
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | txdat<1> | 1218 | PI | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | txdat<1>_II/UIM | 1219 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 10 | 5 | II_REG
+NODE | txdat<1>_II/IREG | 1270 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<1>_II | 10 | 5 | II_REG
+
+INPUT_INSTANCE | 0 | 0 | NULL | txdat<0>_II | DUT_COPY_0_COPY_0 | 16 | 1 | 2
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | txdat<0> | 1220 | PI | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | txdat<0>_II/UIM | 1221 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<0>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 10 | 5 | II_REG
+NODE | txdat<0>_II/IREG | 1269 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | txdat<0>_II | 10 | 5 | II_REG
+
+OUTPUT_INSTANCE | 0 | ok | DUT_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | ok_MC.Q | 1223 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | ok_MC.Q | ok_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | ok | 1224 | PO | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | ok | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | PrldLow | rxdat<0>_MC | DUT_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p1/siginres<0> | 1228 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p1/siginres<0>_MC.Q | p1/siginres<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | rxdat<0>_MC.Q | 1234 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | rxdat<0>_MC.Q | rxdat<0>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | rxdat<0>_MC.SI | rxdat<0>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p1/siginres<0> | 1228 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p1/siginres<0>_MC.Q | p1/siginres<0>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | rxdat<0>_MC.D1 | 1226 | ? | 0 | 0 | rxdat<0>_MC | NULL | NULL | rxdat<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p1/siginres<0>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | rxdat<0>_MC.D2 | 1227 | ? | 0 | 0 | rxdat<0>_MC | NULL | NULL | rxdat<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | rxdat<0>_MC.REG | rxdat<0>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | rxdat<0>_MC.D | 1225 | ? | 0 | 0 | rxdat<0>_MC | NULL | NULL | rxdat<0>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | rxdat<0>_MC.Q | 1233 | ? | 0 | 0 | rxdat<0>_MC | NULL | NULL | rxdat<0>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | p1/siginres<0>_MC | DUT_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<0> | 1175 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<0>_MC.Q | sigx_s<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | p1/siginres<0> | 1228 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p1/siginres<0>_MC.Q | p1/siginres<0>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | p1/siginres<0>_MC.SI | p1/siginres<0>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<0> | 1175 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<0>_MC.Q | sigx_s<0>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | p1/siginres<0>_MC.D1 | 1231 | ? | 0 | 0 | p1/siginres<0>_MC | NULL | NULL | p1/siginres<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | sigx_s<0>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | p1/siginres<0>_MC.D2 | 1232 | ? | 0 | 0 | p1/siginres<0>_MC | NULL | NULL | p1/siginres<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | p1/siginres<0>_MC.REG | p1/siginres<0>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | p1/siginres<0>_MC.D | 1230 | ? | 0 | 0 | p1/siginres<0>_MC | NULL | NULL | p1/siginres<0>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | p1/siginres<0>_MC.Q | 1229 | ? | 0 | 0 | p1/siginres<0>_MC | NULL | NULL | p1/siginres<0>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | rxdat<0> | DUT_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | rxdat<0>_MC.Q | 1234 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | rxdat<0>_MC.Q | rxdat<0>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | rxdat<0> | 1235 | PO | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | rxdat<0> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | PrldLow | rxdat<1>_MC | DUT_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p1/siginres<1> | 1239 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p1/siginres<1>_MC.Q | p1/siginres<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | rxdat<1>_MC.Q | 1245 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | rxdat<1>_MC.Q | rxdat<1>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | rxdat<1>_MC.SI | rxdat<1>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p1/siginres<1> | 1239 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p1/siginres<1>_MC.Q | p1/siginres<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | rxdat<1>_MC.D1 | 1237 | ? | 0 | 0 | rxdat<1>_MC | NULL | NULL | rxdat<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p1/siginres<1>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | rxdat<1>_MC.D2 | 1238 | ? | 0 | 0 | rxdat<1>_MC | NULL | NULL | rxdat<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | rxdat<1>_MC.REG | rxdat<1>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | rxdat<1>_MC.D | 1236 | ? | 0 | 0 | rxdat<1>_MC | NULL | NULL | rxdat<1>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | rxdat<1>_MC.Q | 1244 | ? | 0 | 0 | rxdat<1>_MC | NULL | NULL | rxdat<1>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | p1/siginres<1>_MC | DUT_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<1> | 1183 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<1>_MC.Q | sigx_s<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | p1/siginres<1> | 1239 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p1/siginres<1>_MC.Q | p1/siginres<1>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | p1/siginres<1>_MC.SI | p1/siginres<1>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<1> | 1183 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<1>_MC.Q | sigx_s<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | p1/siginres<1>_MC.D1 | 1242 | ? | 0 | 0 | p1/siginres<1>_MC | NULL | NULL | p1/siginres<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | sigx_s<1>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | p1/siginres<1>_MC.D2 | 1243 | ? | 0 | 0 | p1/siginres<1>_MC | NULL | NULL | p1/siginres<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | p1/siginres<1>_MC.REG | p1/siginres<1>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | p1/siginres<1>_MC.D | 1241 | ? | 0 | 0 | p1/siginres<1>_MC | NULL | NULL | p1/siginres<1>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | p1/siginres<1>_MC.Q | 1240 | ? | 0 | 0 | p1/siginres<1>_MC | NULL | NULL | p1/siginres<1>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | rxdat<1> | DUT_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | rxdat<1>_MC.Q | 1245 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | rxdat<1>_MC.Q | rxdat<1>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | rxdat<1> | 1246 | PO | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | rxdat<1> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | PrldLow | rxdat<2>_MC | DUT_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p1/siginres<2> | 1250 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p1/siginres<2>_MC.Q | p1/siginres<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | rxdat<2>_MC.Q | 1256 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | rxdat<2>_MC.Q | rxdat<2>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | rxdat<2>_MC.SI | rxdat<2>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p1/siginres<2> | 1250 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p1/siginres<2>_MC.Q | p1/siginres<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | rxdat<2>_MC.D1 | 1248 | ? | 0 | 0 | rxdat<2>_MC | NULL | NULL | rxdat<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p1/siginres<2>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | rxdat<2>_MC.D2 | 1249 | ? | 0 | 0 | rxdat<2>_MC | NULL | NULL | rxdat<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | rxdat<2>_MC.REG | rxdat<2>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | rxdat<2>_MC.D | 1247 | ? | 0 | 0 | rxdat<2>_MC | NULL | NULL | rxdat<2>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | rxdat<2>_MC.Q | 1255 | ? | 0 | 0 | rxdat<2>_MC | NULL | NULL | rxdat<2>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | p1/siginres<2>_MC | DUT_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<2> | 1190 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<2>_MC.Q | sigx_s<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | p1/siginres<2> | 1250 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p1/siginres<2>_MC.Q | p1/siginres<2>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | p1/siginres<2>_MC.SI | p1/siginres<2>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<2> | 1190 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<2>_MC.Q | sigx_s<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | p1/siginres<2>_MC.D1 | 1253 | ? | 0 | 0 | p1/siginres<2>_MC | NULL | NULL | p1/siginres<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | sigx_s<2>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | p1/siginres<2>_MC.D2 | 1254 | ? | 0 | 0 | p1/siginres<2>_MC | NULL | NULL | p1/siginres<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | p1/siginres<2>_MC.REG | p1/siginres<2>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | p1/siginres<2>_MC.D | 1252 | ? | 0 | 0 | p1/siginres<2>_MC | NULL | NULL | p1/siginres<2>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | p1/siginres<2>_MC.Q | 1251 | ? | 0 | 0 | p1/siginres<2>_MC | NULL | NULL | p1/siginres<2>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | rxdat<2> | DUT_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | rxdat<2>_MC.Q | 1256 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | rxdat<2>_MC.Q | rxdat<2>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | rxdat<2> | 1257 | PO | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | rxdat<2> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | PrldLow | rxdat<3>_MC | DUT_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p1/siginres<3> | 1261 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p1/siginres<3>_MC.Q | p1/siginres<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | rxdat<3>_MC.Q | 1267 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | rxdat<3>_MC.Q | rxdat<3>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | rxdat<3>_MC.SI | rxdat<3>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nres_II/UIM | 1169 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | nres_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | p1/siginres<3> | 1261 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p1/siginres<3>_MC.Q | p1/siginres<3>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | rxdat<3>_MC.D1 | 1259 | ? | 0 | 0 | rxdat<3>_MC | NULL | NULL | rxdat<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p1/siginres<3>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | rxdat<3>_MC.D2 | 1260 | ? | 0 | 0 | rxdat<3>_MC | NULL | NULL | rxdat<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | rxdat<3>_MC.REG | rxdat<3>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | rxdat<3>_MC.D | 1258 | ? | 0 | 0 | rxdat<3>_MC | NULL | NULL | rxdat<3>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | rxdat<3>_MC.Q | 1266 | ? | 0 | 0 | rxdat<3>_MC | NULL | NULL | rxdat<3>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | p1/siginres<3>_MC | DUT_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<3> | 1197 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<3>_MC.Q | sigx_s<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | p1/siginres<3> | 1261 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | p1/siginres<3>_MC.Q | p1/siginres<3>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | p1/siginres<3>_MC.SI | p1/siginres<3>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sigx_s<3> | 1197 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | sigx_s<3>_MC.Q | sigx_s<3>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | p1/siginres<3>_MC.D1 | 1264 | ? | 0 | 0 | p1/siginres<3>_MC | NULL | NULL | p1/siginres<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | sigx_s<3>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | p1/siginres<3>_MC.D2 | 1265 | ? | 0 | 0 | p1/siginres<3>_MC | NULL | NULL | p1/siginres<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | p1/siginres<3>_MC.REG | p1/siginres<3>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | p1/siginres<3>_MC.D | 1263 | ? | 0 | 0 | p1/siginres<3>_MC | NULL | NULL | p1/siginres<3>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_II/FCLK | 1182 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | p1/siginres<3>_MC.Q | 1262 | ? | 0 | 0 | p1/siginres<3>_MC | NULL | NULL | p1/siginres<3>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | rxdat<3> | DUT_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | rxdat<3>_MC.Q | 1267 | ? | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | rxdat<3>_MC.Q | rxdat<3>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | rxdat<3> | 1268 | PO | 0 | 0 | DUT_COPY_0_COPY_0 | NULL | NULL | rxdat<3> | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 3 | NULL | 0 | nres_II | 1 | NULL | 0 | 206 | 51200
+FBPIN | 6 | p4bit/sigin_s<4>_MC | 1 | NULL | 0 | NULL | 0 | 202 | 49152
+FBPIN | 7 | p1/siginres<3>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 8 | p1/siginres<2>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 9 | p1/siginres<1>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 10 | p1/ok_s_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 11 | p1/siginres<0>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 12 | sigx_s<4>_MC | 1 | NULL | 0 | NULL | 0 | 201 | 49152
+FBPIN | 13 | sigx_s<3>_MC | 1 | NULL | 0 | NULL | 0 | 200 | 49152
+FBPIN | 14 | sigx_s<2>_MC | 1 | NULL | 0 | NULL | 0 | 199 | 49152
+FBPIN | 15 | sigx_s<1>_MC | 1 | NULL | 0 | NULL | 0 | 198 | 49152
+FBPIN | 16 | sigx_s<0>_MC | 1 | NULL | 0 | NULL | 0 | 197 | 49152
+
+FB_INSTANCE | FOOBAR2_ | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR3_ | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR4_ | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR5_ | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR6_ | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 4 | NULL | 0 | clk_II | 1 | NULL | 0 | 55 | 57344
+
+FB_INSTANCE | FOOBAR7_ | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR8_ | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR9_ | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR10_ | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR11_ | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR12_ | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 14 | ok_MC | 1 | NULL | 0 | ok | 1 | 135 | 49152
+FBPIN | 15 | rxdat<3>_MC | 1 | NULL | 0 | rxdat<3> | 1 | 134 | 49152
+
+FB_INSTANCE | FOOBAR13_ | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 15 | p4bit/sigin_s<0>_MC | 1 | txdat<0>_II | 1 | NULL | 0 | 116 | 49152
+FBPIN | 16 | p4bit/sigin_s<1>_MC | 1 | txdat<1>_II | 1 | NULL | 0 | 117 | 49152
+
+FB_INSTANCE | FOOBAR14_ | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR15_ | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | p4bit/sigin_s<2>_MC | 1 | txdat<2>_II | 1 | NULL | 0 | 118 | 49152
+FBPIN | 2 | p4bit/sigin_s<3>_MC | 1 | txdat<3>_II | 1 | NULL | 0 | 119 | 49152
+FBPIN | 13 | rxdat<0>_MC | 1 | NULL | 0 | rxdat<0> | 1 | 127 | 49152
+FBPIN | 14 | rxdat<1>_MC | 1 | NULL | 0 | rxdat<1> | 1 | 128 | 49152
+FBPIN | 16 | rxdat<2>_MC | 1 | NULL | 0 | rxdat<2> | 1 | 131 | 49152
+
+FB_INSTANCE | FOOBAR16_ | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR17_ | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR1_ | FOOBAR1__ctinst | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR2_ | FOOBAR2__ctinst | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR3_ | FOOBAR3__ctinst | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR4_ | FOOBAR4__ctinst | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR5_ | FOOBAR5__ctinst | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR6_ | FOOBAR6__ctinst | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR7_ | FOOBAR7__ctinst | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR8_ | FOOBAR8__ctinst | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR9_ | FOOBAR9__ctinst | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR10_ | FOOBAR10__ctinst | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR11_ | FOOBAR11__ctinst | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR12_ | FOOBAR12__ctinst | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR13_ | FOOBAR13__ctinst | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR14_ | FOOBAR14__ctinst | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR15_ | FOOBAR15__ctinst | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR16_ | FOOBAR16__ctinst | DUT_COPY_0_COPY_0 | 0 | 0 | 0
+
+PLA | FOOBAR1_ | 23
+PLA_TERM | 0 | 
+SPPTERM | 4 | IV_FALSE | sigx_s<1> | IV_TRUE | sigx_s<2> | IV_TRUE | sigx_s<3> | IV_TRUE | sigx_s<4>
+PLA_TERM | 1 | 
+SPPTERM | 4 | IV_TRUE | sigx_s<1> | IV_FALSE | sigx_s<2> | IV_TRUE | sigx_s<3> | IV_TRUE | sigx_s<4>
+PLA_TERM | 2 | 
+SPPTERM | 4 | IV_TRUE | sigx_s<1> | IV_TRUE | sigx_s<2> | IV_FALSE | sigx_s<3> | IV_TRUE | sigx_s<4>
+PLA_TERM | 3 | 
+SPPTERM | 4 | IV_FALSE | sigx_s<1> | IV_FALSE | sigx_s<2> | IV_FALSE | sigx_s<3> | IV_TRUE | sigx_s<4>
+PLA_TERM | 4 | 
+SPPTERM | 4 | IV_TRUE | sigx_s<1> | IV_TRUE | sigx_s<2> | IV_TRUE | sigx_s<3> | IV_FALSE | sigx_s<4>
+PLA_TERM | 5 | 
+SPPTERM | 4 | IV_FALSE | sigx_s<1> | IV_FALSE | sigx_s<2> | IV_TRUE | sigx_s<3> | IV_FALSE | sigx_s<4>
+PLA_TERM | 6 | 
+SPPTERM | 4 | IV_FALSE | sigx_s<1> | IV_TRUE | sigx_s<2> | IV_FALSE | sigx_s<3> | IV_FALSE | sigx_s<4>
+PLA_TERM | 7 | 
+SPPTERM | 4 | IV_TRUE | sigx_s<1> | IV_FALSE | sigx_s<2> | IV_FALSE | sigx_s<3> | IV_FALSE | sigx_s<4>
+PLA_TERM | 8 | 
+SPPTERM | 3 | IV_FALSE | txdat<2>_II/UIM | IV_TRUE | txdat<1>_II/UIM | IV_TRUE | txdat<0>_II/UIM
+PLA_TERM | 9 | 
+SPPTERM | 3 | IV_TRUE | txdat<2>_II/UIM | IV_FALSE | txdat<1>_II/UIM | IV_TRUE | txdat<0>_II/UIM
+PLA_TERM | 10 | 
+SPPTERM | 3 | IV_TRUE | txdat<2>_II/UIM | IV_TRUE | txdat<1>_II/UIM | IV_FALSE | txdat<0>_II/UIM
+PLA_TERM | 11 | 
+SPPTERM | 3 | IV_FALSE | txdat<2>_II/UIM | IV_FALSE | txdat<1>_II/UIM | IV_FALSE | txdat<0>_II/UIM
+PLA_TERM | 25 | 
+SPPTERM | 1 | IV_TRUE | txdat<3>_II/UIM
+PLA_TERM | 28 | 
+SPPTERM | 1 | IV_TRUE | sigx_s<3>
+PLA_TERM | 31 | 
+SPPTERM | 1 | IV_TRUE | sigx_s<2>
+PLA_TERM | 34 | 
+SPPTERM | 1 | IV_TRUE | sigx_s<1>
+PLA_TERM | 37 | 
+SPPTERM | 1 | IV_TRUE | sigx_s<0>
+PLA_TERM | 40 | 
+SPPTERM | 1 | IV_TRUE | sigx_s<0>
+PLA_TERM | 43 | 
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p4bit/sigin_s<4>
+PLA_TERM | 46 | 
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p4bit/sigin_s<3>
+PLA_TERM | 49 | 
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p4bit/sigin_s<2>
+PLA_TERM | 52 | 
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p4bit/sigin_s<1>
+PLA_TERM | 55 | 
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p4bit/sigin_s<0>
+
+PLA | FOOBAR12_ | 2
+PLA_TERM | 49 | 
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p1/ok_s
+PLA_TERM | 52 | 
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p1/siginres<3>
+
+PLA | FOOBAR15_ | 3
+PLA_TERM | 46 | 
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p1/siginres<0>
+PLA_TERM | 49 | 
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p1/siginres<1>
+PLA_TERM | 55 | 
+SPPTERM | 2 | IV_TRUE | nres_II/UIM | IV_TRUE | p1/siginres<2>
+
+BUSINFO | RXDAT<3:0> | 4 | 0 | 1 | rxdat<0> | 3 | rxdat<1> | 2 | rxdat<2> | 1 | rxdat<3> | 0
+BUSINFO | TXDAT<3:0> | 4 | 0 | 0 | txdat<0> | 3 | txdat<1> | 2 | txdat<2> | 1 | txdat<3> | 0
+
+IOSTD | LVCMOS18
+clk | LVCMOS33
+nres | LVCMOS33
+txdat<3> | LVCMOS33
+txdat<2> | LVCMOS33
+txdat<1> | LVCMOS33
+txdat<0> | LVCMOS33
+ok | LVCMOS33
+rxdat<0> | LVCMOS33
+rxdat<1> | LVCMOS33
+rxdat<2> | LVCMOS33
+rxdat<3> | LVCMOS33
+
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 2 | sigx_s<1> | NULL | 3 | p4bit/sigin_s<2> | NULL | 4 | p4bit/sigin_s<1> | NULL | 5 | p4bit/sigin_s<3> | NULL | 8 | sigx_s<2> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 9 | p4bit/sigin_s<0> | NULL | 10 | txdat<2> | 118 | 13 | txdat<0> | 116 | 14 | sigx_s<0> | NULL | 17 | sigx_s<3> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 18 | p4bit/sigin_s<4> | NULL | 20 | sigx_s<4> | NULL | 23 | nres | 206 | 24 | txdat<3> | 119 | 30 | txdat<1> | 117
+
+FB_IMUX_INDEX | FOOBAR1_ | -1 | -1 | 198 | 408 | 391 | 409 | -1 | -1 | 197 | 390 | 160 | -1 | -1 | 147 | 199 | -1 | -1 | 196 | 189 | -1 | 195 | -1 | -1 | 2 | 161 | -1 | -1 | -1 | -1 | -1 | 148 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR12_ | 0 | p1/ok_s | NULL | 2 | nres | 206 | 5 | p1/siginres<3> | NULL
+
+FB_IMUX_INDEX | FOOBAR12_ | 193 | -1 | 2 | -1 | -1 | 190 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR15_ | 2 | nres | 206 | 6 | p1/siginres<0> | NULL | 7 | p1/siginres<2> | NULL | 10 | p1/siginres<1> | NULL
+
+FB_IMUX_INDEX | FOOBAR15_ | -1 | -1 | 2 | -1 | -1 | -1 | 194 | 191 | -1 | -1 | 192 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+GLOBAL_FCLK | clk | 2 | 2

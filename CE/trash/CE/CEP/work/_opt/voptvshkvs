@@ -1,0 +1,44 @@
+m255
+K3
+13
+Z0 cModel Technology
+dZ:\
+T_opt
+Z1 VATZF=ojih6Zof?f553@b70
+Z2 04 7 7 work clk_div clk_seg 1
+Z3 =1-000ffee86545-4e96d68f-1e4-adc
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 tExplicit 1
+Z6 OE;O;6.3j;37
+Eclk_div
+Z7 w1318507377
+Z8 DPx22 C:\Modeltech_6.3j\ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z9 DPx22 C:\Modeltech_6.3j\ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z10 DPx22 C:\Modeltech_6.3j\ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+Z11 dZ:\CEP
+Z12 8Z:/CEP/Clk_div.vhd
+Z13 FZ:/CEP/Clk_div.vhd
+l0
+L6
+Z14 VmDFO5g6_3?=e[_MPSf0L42
+Z15 OE;C;6.3j;37
+Z16 o-work work -2002 -explicit
+R5
+Z17 !s100 aWCf_9m=LIRHH4=F;ENeQ1
+Aclk_seg
+R8
+R9
+R10
+DEx11 Z:\CEP\work 7 clk_div 0 22 mDFO5g6_3?=e[_MPSf0L42
+32
+Mx3 22 C:\Modeltech_6.3j\ieee 14 std_logic_1164
+Mx2 22 C:\Modeltech_6.3j\ieee 15 std_logic_arith
+Mx1 22 C:\Modeltech_6.3j\ieee 18 std_logic_unsigned
+l17
+L14
+Z18 VHhQJfNkm6[Dd^XaaELAI]2
+R15
+R16
+R5
+Z19 !s100 NKN<O3UFe^17;nT`VhB=E1

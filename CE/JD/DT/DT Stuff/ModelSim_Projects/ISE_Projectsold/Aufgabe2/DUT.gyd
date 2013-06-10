@@ -1,0 +1,41 @@
+Pin Freeze File:  version M.81d
+
+2C256208 XC2C256-7-PQ208
+clk S:PIN55
+nres S:PIN206
+txdat<0> S:PIN116
+txdat<1> S:PIN117
+txdat<2> S:PIN118
+txdat<3> S:PIN119
+ok S:PIN135
+rxdat<0> S:PIN127
+rxdat<1> S:PIN128
+rxdat<2> S:PIN131
+rxdat<3> S:PIN134
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_6 p4bit/sigin_s<4> p1/siginres<3> p1/siginres<2> p1/siginres<1>
+		 p1/ok_s p1/siginres<0> sigx_s<4> sigx_s<3>
+		 sigx_s<2> sigx_s<1> sigx_s<0>
+
+
+
+
+
+
+
+
+
+
+PARTITION FB12_14 ok rxdat<3>
+
+PARTITION FB13_15 p4bit/sigin_s<0> p4bit/sigin_s<1>
+
+PARTITION FB15_1 p4bit/sigin_s<2> p4bit/sigin_s<3>
+PARTITION FB15_13 rxdat<0> rxdat<1>
+PARTITION FB15_16 rxdat<2>
+
+

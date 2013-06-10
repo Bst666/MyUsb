@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=Z:\CEP\ise\Sreg\Schieberegister.ncd
+OUTFILE=Z:\CEP\ise\Sreg\Schieberegister.bit
+FAMILY=Spartan3E
+PART=xc3s1200e-4fg320
+WORKINGDIR=Z:\CEP\ise\Sreg
+LICENSE=ISE
+USER_INFO=174119094_174119098_174417557

@@ -1,0 +1,234 @@
+MDF Database:  version 1.0
+MDF_INFO | DUT | XC2C256-7-PQ208
+MACROCELL | 11 | 13 | ok_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 2 | nres  | p1/ok_s
+INPUTMC | 1 | 0 | 9
+INPUTP | 1 | 218
+EQ | 2 | 
+   ok := nres & p1/ok_s;	// (1 pt, 2 inp)
+   ok.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 9 | p1/ok_s_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 11 | 13
+INPUTS | 5 | sigx_s<0>  | sigx_s<1>  | sigx_s<2>  | sigx_s<3>  | sigx_s<4>
+INPUTMC | 5 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 12 | 0 | 11
+EQ | 10 | 
+   p1/ok_s := sigx_s<0>
+	$ sigx_s<1> & sigx_s<2> & sigx_s<3> & !sigx_s<4>
+	# sigx_s<1> & sigx_s<2> & !sigx_s<3> & sigx_s<4>
+	# sigx_s<1> & !sigx_s<2> & sigx_s<3> & sigx_s<4>
+	# sigx_s<1> & !sigx_s<2> & !sigx_s<3> & !sigx_s<4>
+	# !sigx_s<1> & sigx_s<2> & sigx_s<3> & sigx_s<4>
+	# !sigx_s<1> & sigx_s<2> & !sigx_s<3> & !sigx_s<4>
+	# !sigx_s<1> & !sigx_s<2> & sigx_s<3> & !sigx_s<4>
+	# !sigx_s<1> & !sigx_s<2> & !sigx_s<3> & sigx_s<4>;	// (9 pt, 5 inp)
+   p1/ok_s.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 15 | sigx_s<0>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 0 | 9 | 0 | 10
+INPUTS | 2 | nres  | p4bit/sigin_s<0>
+INPUTMC | 1 | 12 | 14
+INPUTP | 1 | 218
+EQ | 2 | 
+   sigx_s<0> := nres & p4bit/sigin_s<0>;	// (1 pt, 2 inp)
+   sigx_s<0>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 12 | 14 | p4bit/sigin_s<0>_MC
+ATTRIBUTES | 2155905024 | 4
+OUTPUTMC | 1 | 0 | 15
+INPUTS | 0 
+EQ | 4 | 
+   
+// Direct Input Register
+p4bit/sigin_s<0> := txdat<0>;	// (0 pt, 0 inp)
+   p4bit/sigin_s<0>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 14 | sigx_s<1>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 0 | 9 | 0 | 8
+INPUTS | 2 | nres  | p4bit/sigin_s<1>
+INPUTMC | 1 | 12 | 15
+INPUTP | 1 | 218
+EQ | 2 | 
+   sigx_s<1> := nres & p4bit/sigin_s<1>;	// (1 pt, 2 inp)
+   sigx_s<1>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 12 | 15 | p4bit/sigin_s<1>_MC
+ATTRIBUTES | 2155905024 | 4
+OUTPUTMC | 1 | 0 | 14
+INPUTS | 0 
+EQ | 4 | 
+   
+// Direct Input Register
+p4bit/sigin_s<1> := txdat<1>;	// (0 pt, 0 inp)
+   p4bit/sigin_s<1>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 13 | sigx_s<2>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 0 | 9 | 0 | 7
+INPUTS | 2 | nres  | p4bit/sigin_s<2>
+INPUTMC | 1 | 14 | 0
+INPUTP | 1 | 218
+EQ | 2 | 
+   sigx_s<2> := nres & p4bit/sigin_s<2>;	// (1 pt, 2 inp)
+   sigx_s<2>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 14 | 0 | p4bit/sigin_s<2>_MC
+ATTRIBUTES | 2155905024 | 4
+OUTPUTMC | 1 | 0 | 13
+INPUTS | 0 
+EQ | 4 | 
+   
+// Direct Input Register
+p4bit/sigin_s<2> := txdat<2>;	// (0 pt, 0 inp)
+   p4bit/sigin_s<2>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 12 | sigx_s<3>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 0 | 9 | 0 | 6
+INPUTS | 2 | nres  | p4bit/sigin_s<3>
+INPUTMC | 1 | 14 | 1
+INPUTP | 1 | 218
+EQ | 2 | 
+   sigx_s<3> := nres & p4bit/sigin_s<3>;	// (1 pt, 2 inp)
+   sigx_s<3>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 14 | 1 | p4bit/sigin_s<3>_MC
+ATTRIBUTES | 2155905024 | 4
+OUTPUTMC | 1 | 0 | 12
+INPUTS | 0 
+EQ | 4 | 
+   
+// Direct Input Register
+p4bit/sigin_s<3> := txdat<3>;	// (0 pt, 0 inp)
+   p4bit/sigin_s<3>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 11 | sigx_s<4>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 0 | 9
+INPUTS | 2 | nres  | p4bit/sigin_s<4>
+INPUTMC | 1 | 0 | 5
+INPUTP | 1 | 218
+EQ | 2 | 
+   sigx_s<4> := nres & p4bit/sigin_s<4>;	// (1 pt, 2 inp)
+   sigx_s<4>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 5 | p4bit/sigin_s<4>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 0 | 11
+INPUTS | 4 | txdat<3>  | txdat<2>  | txdat<1>  | txdat<0>
+INPUTP | 4 | 125 | 124 | 123 | 122
+EQ | 6 | 
+   p4bit/sigin_s<4> := txdat<3>
+	$ txdat<2> & txdat<1> & !txdat<0>
+	# txdat<2> & !txdat<1> & txdat<0>
+	# !txdat<2> & txdat<1> & txdat<0>
+	# !txdat<2> & !txdat<1> & !txdat<0>;	// (5 pt, 4 inp)
+   p4bit/sigin_s<4>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 14 | 12 | rxdat<0>_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 2 | nres  | p1/siginres<0>
+INPUTMC | 1 | 0 | 10
+INPUTP | 1 | 218
+EQ | 2 | 
+   rxdat<0> := nres & p1/siginres<0>;	// (1 pt, 2 inp)
+   rxdat<0>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 10 | p1/siginres<0>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 14 | 12
+INPUTS | 1 | sigx_s<0>
+INPUTMC | 1 | 0 | 15
+EQ | 2 | 
+   p1/siginres<0> := sigx_s<0>;	// (1 pt, 1 inp)
+   p1/siginres<0>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 14 | 13 | rxdat<1>_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 2 | nres  | p1/siginres<1>
+INPUTMC | 1 | 0 | 8
+INPUTP | 1 | 218
+EQ | 2 | 
+   rxdat<1> := nres & p1/siginres<1>;	// (1 pt, 2 inp)
+   rxdat<1>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 8 | p1/siginres<1>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 14 | 13
+INPUTS | 1 | sigx_s<1>
+INPUTMC | 1 | 0 | 14
+EQ | 2 | 
+   p1/siginres<1> := sigx_s<1>;	// (1 pt, 1 inp)
+   p1/siginres<1>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 14 | 15 | rxdat<2>_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 2 | nres  | p1/siginres<2>
+INPUTMC | 1 | 0 | 7
+INPUTP | 1 | 218
+EQ | 2 | 
+   rxdat<2> := nres & p1/siginres<2>;	// (1 pt, 2 inp)
+   rxdat<2>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 7 | p1/siginres<2>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 14 | 15
+INPUTS | 1 | sigx_s<2>
+INPUTMC | 1 | 0 | 13
+EQ | 2 | 
+   p1/siginres<2> := sigx_s<2>;	// (1 pt, 1 inp)
+   p1/siginres<2>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 11 | 14 | rxdat<3>_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 2 | nres  | p1/siginres<3>
+INPUTMC | 1 | 0 | 6
+INPUTP | 1 | 218
+EQ | 2 | 
+   rxdat<3> := nres & p1/siginres<3>;	// (1 pt, 2 inp)
+   rxdat<3>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 6 | p1/siginres<3>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 11 | 14
+INPUTS | 1 | sigx_s<3>
+INPUTMC | 1 | 0 | 12
+EQ | 2 | 
+   p1/siginres<3> := sigx_s<3>;	// (1 pt, 1 inp)
+   p1/siginres<3>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+PIN | clk | 16384 | 16 | LVCMOS33 | 59 | 20 | 12 | 14 | 0 | 15 | 12 | 15 | 0 | 14 | 14 | 0 | 0 | 13 | 14 | 1 | 0 | 12 | 0 | 5 | 0 | 11 | 0 | 9 | 11 | 13 | 0 | 10 | 14 | 12 | 0 | 8 | 14 | 13 | 0 | 7 | 14 | 15 | 0 | 6 | 11 | 14
+PIN | nres | 64 | 16 | LVCMOS33 | 218 | 10 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 12 | 0 | 11 | 11 | 13 | 14 | 12 | 14 | 13 | 14 | 15 | 11 | 14
+PIN | txdat<3> | 64 | 16 | LVCMOS33 | 125 | 2 | 0 | 5 | 14 | 1
+PIN | txdat<2> | 64 | 16 | LVCMOS33 | 124 | 2 | 0 | 5 | 14 | 0
+PIN | txdat<1> | 64 | 16 | LVCMOS33 | 123 | 2 | 0 | 5 | 12 | 15
+PIN | txdat<0> | 64 | 16 | LVCMOS33 | 122 | 2 | 0 | 5 | 12 | 14
+PIN | ok | 536871040 | 0 | LVCMOS33 | 143
+PIN | rxdat<0> | 536871040 | 0 | LVCMOS33 | 133
+PIN | rxdat<1> | 536871040 | 0 | LVCMOS33 | 134
+PIN | rxdat<2> | 536871040 | 0 | LVCMOS33 | 138
+PIN | rxdat<3> | 536871040 | 0 | LVCMOS33 | 142

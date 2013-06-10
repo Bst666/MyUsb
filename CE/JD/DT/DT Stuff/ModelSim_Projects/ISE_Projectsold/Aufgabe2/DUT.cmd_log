@@ -1,0 +1,85 @@
+xst -intstyle ise -ifn "D:/ISE_Projects/Aufgabe2/DUT.xst" -ofn "D:/ISE_Projects/Aufgabe2/DUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc D:/VHDL_Codes/dut.ucf -p xc2c256-PQ208-7 DUT.ngc DUT.ngd  
+cpldfit -intstyle ise -p xc2c256-7-PQ208 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 DUT.ngd 
+XSLTProcess DUT_build.xml 
+tsim -intstyle ise DUT DUT.nga 
+taengine -intstyle ise -f DUT -w --format html1 -l DUT_html/tim/timing_report.htm 
+xst -intstyle ise -ifn "D:/ISE_Projects/Aufgabe2/DUT.xst" -ofn "D:/ISE_Projects/Aufgabe2/DUT.syr" 
+xst -intstyle ise -ifn "D:/ISE_Projects/Aufgabe2/DUT.xst" -ofn "D:/ISE_Projects/Aufgabe2/DUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc D:/VHDL_Codes/dut.ucf -p xc2c256-PQ208-7 DUT.ngc DUT.ngd  
+cpldfit -intstyle ise -p xc2c256-7-PQ208 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 DUT.ngd 
+XSLTProcess DUT_build.xml 
+tsim -intstyle ise DUT DUT.nga 
+taengine -intstyle ise -f DUT -w --format html1 -l DUT_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -i DUT 
+xst -intstyle ise -ifn "D:/ISE_Projects/Aufgabe2/DUT.xst" -ofn "D:/ISE_Projects/Aufgabe2/DUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc D:/VHDL_Codes/dut.ucf -p xc2c256-PQ208-7 DUT.ngc DUT.ngd  
+cpldfit -intstyle ise -p xc2c256-7-PQ208 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 DUT.ngd 
+XSLTProcess DUT_build.xml 
+tsim -intstyle ise DUT DUT.nga 
+hprep6 -s IEEE1149 -i DUT 
+xst -intstyle ise -ifn "D:/ISE_Projects/Aufgabe2/DUT.xst" -ofn "D:/ISE_Projects/Aufgabe2/DUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc D:/VHDL_Codes/dut.ucf -p xc2c256-PQ208-7 DUT.ngc DUT.ngd  
+cpldfit -intstyle ise -p xc2c256-7-PQ208 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 DUT.ngd 
+XSLTProcess DUT_build.xml 
+tsim -intstyle ise DUT DUT.nga 
+hprep6 -s IEEE1149 -i DUT 
+xst -intstyle ise -ifn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/VHDL_Codes/dut.ucf" -p xc2c256-PQ208-7 "DUT.ngc" DUT.ngd  
+cpldfit -intstyle ise -p xc2c256-7-PQ208 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 DUT.ngd 
+XSLTProcess DUT_build.xml 
+tsim -intstyle ise DUT DUT.nga 
+hprep6 -s IEEE1149 -i DUT 
+xst -intstyle ise -ifn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/VHDL_Codes/dut.ucf" -p xc2c256-PQ208-7 "DUT.ngc" DUT.ngd  
+cpldfit -intstyle ise -p xc2c256-7-PQ208 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 DUT.ngd 
+XSLTProcess DUT_build.xml 
+tsim -intstyle ise DUT DUT.nga 
+hprep6 -s IEEE1149 -i DUT 
+xst -intstyle ise -ifn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/VHDL_Codes/dut.ucf" -p xc2c256-PQ208-7 "DUT.ngc" DUT.ngd  
+cpldfit -intstyle ise -p xc2c256-7-PQ208 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 DUT.ngd 
+XSLTProcess DUT_build.xml 
+tsim -intstyle ise DUT DUT.nga 
+hprep6 -s IEEE1149 -i DUT 
+xst -intstyle ise -ifn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc "C:/Documents and Settings/aaw251/Desktop/ModelSim_Projects/VHDL_Codes/dut.ucf" -p xc2c256-PQ208-7 "DUT.ngc" DUT.ngd  
+cpldfit -intstyle ise -p xc2c256-7-PQ208 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 DUT.ngd 
+XSLTProcess DUT_build.xml 
+tsim -intstyle ise DUT DUT.nga 
+hprep6 -s IEEE1149 -i DUT 
+taengine -intstyle ise -f DUT -w --format html1 -l DUT_html/tim/timing_report.htm 
+netgen -intstyle ise -rpw 100 -ar Structure -tm DUT -w -dir netgen/fit -ofmt vhdl -sim DUT.nga DUT_timesim.vhd 
+hprep6 -s IEEE1149 -i DUT 
+hprep6 -s IEEE1149 -i DUT 
+xst -intstyle ise -ifn "C:/Users/DIPUser/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Users/DIPUser/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc C:/Users/DIPUser/Desktop/ModelSim_Projects/VHDL_Codes/dut.ucf -p xc2c256-PQ208-7 DUT.ngc DUT.ngd  
+cpldfit -intstyle ise -p xc2c256-7-PQ208 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 DUT.ngd 
+XSLTProcess DUT_build.xml 
+tsim -intstyle ise DUT DUT.nga 
+hprep6 -s IEEE1149 -i DUT 
+xst -intstyle ise -ifn "C:/Users/DIPUser/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Users/DIPUser/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+xst -intstyle ise -ifn "C:/Users/DIPUser/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Users/DIPUser/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc C:/Users/DIPUser/Desktop/ModelSim_Projects/VHDL_Codes/dut.ucf -p xc2c256-PQ208-7 DUT.ngc DUT.ngd  
+cpldfit -intstyle ise -p xc2c256-7-PQ208 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 DUT.ngd 
+XSLTProcess DUT_build.xml 
+tsim -intstyle ise DUT DUT.nga 
+hprep6 -s IEEE1149 -i DUT 
+xst -intstyle ise -ifn "C:/Users/DIPUser/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.xst" -ofn "C:/Users/DIPUser/Desktop/ModelSim_Projects/ISE_Projects/Aufgabe2/DUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc C:/Users/DIPUser/Desktop/ModelSim_Projects/VHDL_Codes/dut.ucf -p xc2c256-PQ208-7 DUT.ngc DUT.ngd  
+cpldfit -intstyle ise -p xc2c256-7-PQ208 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 DUT.ngd 
+XSLTProcess DUT_build.xml 
+tsim -intstyle ise DUT DUT.nga 
+hprep6 -s IEEE1149 -i DUT 

@@ -1,0 +1,5 @@
+vhdl work "D:\VHDL_Codes\parity4bit.vhd"
+vhdl work "D:\VHDL_Codes\parcheck.vhd"
+vhdl work "D:\VHDL_Codes\sg.vhd"
+vhdl work "D:\VHDL_Codes\DUT.vhd"
+vhdl work "D:\VHDL_Codes\toplevel.vhd"

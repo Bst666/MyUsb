@@ -1,0 +1,79 @@
+
+library work;
+    use work.all;
+    
+library ieee;
+    use ieee.std_logic_1164.all;
+
+
+
+entity DUT is
+        PORT(     
+           txdat: IN std_logic_vector(3 downto 0);
+           rxdat: OUT std_logic_vector(3 downto 0); 
+           ok:    OUT std_logic;
+           clk:   IN std_logic;
+           nres:  IN std_logic
+             
+        );
+end entity DUT;
+
+
+
+architecture beh of DUT is
+    
+    signal rxdat_s : std_logic_vector(3 downto 0);
+    signal ok_s : std_logic;
+    --signal clk_s : std_logic;
+    --signal nres_s : std_logic;
+    signal sigx_s : std_logic_vector(4 downto 0);
+    
+    
+    
+    component parity4bit
+        PORT(
+        sigin: IN std_logic_vector(3 downto 0);
+        sigout: OUT std_logic_vector(4 downto 0);   
+        clk: IN std_logic;
+        nres: In std_logic   
+        );
+    end component parity4bit;
+    
+    component parcheck
+        PORT(
+           sigin:  IN std_logic_vector(4 downto 0);     
+           ok:    OUT std_logic;
+           rxdat: OUT std_logic_vector(3 downto 0);
+           clk: IN std_logic;
+           nres: In std_logic        
+        );
+    end component parcheck;
+   
+    
+begin
+    
+    p4bit : parity4bit
+       port map (
+           sigin => txdat,
+           sigout => sigx_s,
+           clk => clk,
+           nres => nres
+       );
+        
+    p1 : parcheck
+       port map (
+            sigin => sigx_s,
+            rxdat => rxdat_s,
+            ok => ok_s,
+            clk => clk,
+            nres => nres
+        );
+        
+    connect:
+    PROCESS(txdat, rxdat_s, ok_s)
+       BEGIN
+        rxdat <= rxdat_s;
+        ok <= ok_s;
+    END PROCESS connect;
+    
+end architecture beh;

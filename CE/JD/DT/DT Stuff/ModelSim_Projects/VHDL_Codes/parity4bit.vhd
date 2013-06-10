@@ -1,0 +1,69 @@
+
+library work;
+    use work.all;
+    
+library ieee;
+    use ieee.std_logic_1164.all;
+
+
+
+entity parity4bit is
+        PORT(
+        sigin: IN std_logic_vector(3 downto 0);
+        sigout: OUT std_logic_vector(4 downto 0);   
+        clk: IN std_logic;
+        nres: IN std_logic  
+        );
+end entity parity4bit;
+
+
+
+architecture beh of parity4bit is
+
+signal sigin_s: std_logic_vector(3 downto 0);
+signal sigout_s: std_logic_vector(4 downto 0);
+begin
+    
+    input:
+    PROCESS(clk)
+       BEGIN
+        if clk='1' and clk'event then
+           if nres = '0' then  
+					sigin_s <= (others => '0');
+           else
+              sigin_s <= sigin;
+           end if;
+        end if;
+     END PROCESS input;
+     
+     
+     
+    get_pb:
+    PROCESS(sigin_s)
+       variable sigin_v: std_logic_vector(4 downto 0);
+       BEGIN
+
+              sigin_v(0) := sigin_s(0);
+              sigin_v(1) := sigin_s(1);
+              sigin_v(2) := sigin_s(2);
+              sigin_v(3) := sigin_s(3);
+              sigin_v(4) := NOT( (((sigin_v(0) XOR sigin_v(1)) XOR sigin_v(2)) XOR sigin_v(3)) );
+           
+              sigout_s <= sigin_v;
+
+     END PROCESS get_pb;
+           
+           
+    output:
+    PROCESS(clk)
+       BEGIN
+        if clk='1' and clk'event then
+            if nres = '0' then  
+               sigout  <= (others => '0');
+            else
+               sigout <= sigout_s;
+            end if;
+        end if;
+    END PROCESS output;
+    
+end architecture beh;

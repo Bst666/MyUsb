@@ -1,0 +1,31 @@
+D:/CE/work/TB_SchiebeReg.vhd {1 {vcom -work work -2002 -explicit -vopt D:/CE/work/TB_SchiebeReg.vhd
+Model Technology ModelSim SE vcom 6.3j Compiler 2008.10 Oct 30 2008
+-- Loading package standard
+-- Compiling entity test_b_sr
+-- Compiling architecture sequenz of test_b_sr
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Loading entity schieberegister
+
+} {} {}} Z:/CEP/Clk_div.vhd {2 {vcom -work work -2002 -explicit -vopt Z:/CEP/Clk_div.vhd
+Model Technology ModelSim SE vcom 6.3j Compiler 2008.10 Oct 30 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity clk_div
+-- Compiling architecture clk_seg of clk_div
+** Warning: [4] Z:/CEP/Clk_div.vhd(21): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+
+} {} {}} Z:/CEP/TB_7seq.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/CEP/TB_7seq.vhd
+Model Technology ModelSim SE vcom 6.3j Compiler 2008.10 Oct 30 2008
+-- Loading package standard
+-- Compiling entity tb_7seq
+-- Compiling architecture sequenz of tb_7seq
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Loading entity segment_illu
+
+} {} {}}

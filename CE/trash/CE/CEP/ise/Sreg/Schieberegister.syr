@@ -1,0 +1,489 @@
+Release 12.4 - xst M.81d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: Schieberegister.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Schieberegister.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Schieberegister"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-4-fg320
+
+---- Source Options
+Top Module Name                    : Schieberegister
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//homefs/aax289/CEP/Schieberegister.vhd" in Library work.
+WARNING:HDLParsers:3530 - Time stamp of file "//homefs/aax289/CEP/Schieberegister.vhd" is newer than current system time.
+Entity <schieberegister> compiled.
+Entity <schieberegister> (Architecture <verhalten>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Schieberegister> in library <work> (architecture <verhalten>) with generics.
+	N = 24
+	limit = 131072
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <Schieberegister> in library <work> (Architecture <verhalten>).
+	N = 24
+	limit = 131072
+WARNING:Xst:819 - "//homefs/aax289/CEP/Schieberegister.vhd" line 56: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <CLKENIN>, <S0>, <S1>, <D0>, <D23>
+Entity <Schieberegister> analyzed. Unit <Schieberegister> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Schieberegister>.
+    Related source file is "//homefs/aax289/CEP/Schieberegister.vhd".
+    Found 4x4-bit ROM for signal <cnt$rom0000>.
+    Found 16x8-bit ROM for signal <CATHODE$mux0001> created at line 134.
+    Found 4-bit register for signal <ANODE>.
+    Found 8-bit register for signal <CATHODE>.
+    Found 1-bit register for signal <CLKEN>.
+    Found 1-bit register for signal <CLKENIN>.
+    Found 1-bit register for signal <CLKENIN_OLD>.
+    Found 2-bit up counter for signal <cnt>.
+    Found 18-bit up counter for signal <counter>.
+    Found 19-bit comparator greatequal for signal <counter$cmp_ge0000> created at line 84.
+    Found 24-bit register for signal <INTREG>.
+    Found 4-bit 4-to-1 multiplexer for signal <value$mux0000> created at line 104.
+    Summary:
+	inferred   2 ROM(s).
+	inferred   2 Counter(s).
+	inferred  39 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <Schieberegister> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x8-bit ROM                                          : 1
+ 4x4-bit ROM                                           : 1
+# Counters                                             : 2
+ 18-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 9
+ 1-bit register                                        : 7
+ 24-bit register                                       : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 1
+ 19-bit comparator greatequal                          : 1
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x8-bit ROM                                          : 1
+ 4x4-bit ROM                                           : 1
+# Counters                                             : 2
+ 18-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 39
+ Flip-Flops                                            : 39
+# Comparators                                          : 1
+ 19-bit comparator greatequal                          : 1
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <CATHODE_0> (without init value) has a constant value of 1 in block <Schieberegister>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Schieberegister> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Schieberegister, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 58
+ Flip-Flops                                            : 58
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Schieberegister.ngr
+Top Level Output File Name         : Schieberegister
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 55
+
+Cell Usage :
+# BELS                             : 136
+#      GND                         : 1
+#      INV                         : 3
+#      LUT2                        : 29
+#      LUT3                        : 26
+#      LUT4                        : 37
+#      MUXCY                       : 17
+#      MUXF5                       : 4
+#      VCC                         : 1
+#      XORCY                       : 18
+# FlipFlops/Latches                : 58
+#      FD                          : 1
+#      FDC                         : 21
+#      FDCE                        : 24
+#      FDP                         : 11
+#      FDR                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 54
+#      IBUF                        : 6
+#      OBUF                        : 48
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-4 
+
+ Number of Slices:                       51  out of   8672     0%  
+ Number of Slice Flip Flops:             58  out of  17344     0%  
+ Number of 4 input LUTs:                 95  out of  17344     0%  
+ Number of IOs:                          55
+ Number of bonded IOBs:                  55  out of    250    22%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 45    |
+CLKEN                              | NONE(ANODE_0)          | 13    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+MR_OUT_inv(MR_OUT_inv1_INV_0:O)    | NONE(ANODE_0)          | 56    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 4.935ns (Maximum Frequency: 202.634MHz)
+   Minimum input arrival time before clock: 5.068ns
+   Maximum output required time after clock: 5.795ns
+   Maximum combinational path delay: 7.049ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 4.935ns (frequency: 202.634MHz)
+  Total number of paths / destination ports: 430 / 68
+-------------------------------------------------------------------------
+Delay:               4.935ns (Levels of Logic = 19)
+  Source:            counter_17 (FF)
+  Destination:       counter_17 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: counter_17 to counter_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             19   0.591   1.120  counter_17 (counter_17)
+     LUT3:I2->O            1   0.704   0.000  Mcount_counter_lut<0> (Mcount_counter_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Mcount_counter_cy<0> (Mcount_counter_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_counter_cy<1> (Mcount_counter_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_counter_cy<2> (Mcount_counter_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_counter_cy<3> (Mcount_counter_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_counter_cy<4> (Mcount_counter_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_counter_cy<5> (Mcount_counter_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_counter_cy<6> (Mcount_counter_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_counter_cy<7> (Mcount_counter_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_counter_cy<8> (Mcount_counter_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_counter_cy<9> (Mcount_counter_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_counter_cy<10> (Mcount_counter_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_counter_cy<11> (Mcount_counter_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_counter_cy<12> (Mcount_counter_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_counter_cy<13> (Mcount_counter_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_counter_cy<14> (Mcount_counter_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_counter_cy<15> (Mcount_counter_cy<15>)
+     MUXCY:CI->O           0   0.059   0.000  Mcount_counter_cy<16> (Mcount_counter_cy<16>)
+     XORCY:CI->O           1   0.804   0.000  Mcount_counter_xor<17> (Mcount_counter17)
+     FDC:D                     0.308          counter_17
+    ----------------------------------------
+    Total                      4.935ns (3.815ns logic, 1.120ns route)
+                                       (77.3% logic, 22.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLKEN'
+  Clock period: 4.546ns (frequency: 219.974MHz)
+  Total number of paths / destination ports: 95 / 13
+-------------------------------------------------------------------------
+Delay:               4.546ns (Levels of Logic = 3)
+  Source:            cnt_0 (FF)
+  Destination:       CATHODE_1 (FF)
+  Source Clock:      CLKEN rising
+  Destination Clock: CLKEN rising
+
+  Data Path: cnt_0 to CATHODE_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             14   0.591   1.035  cnt_0 (cnt_0)
+     LUT3:I2->O            1   0.704   0.000  Mmux_value_mux0000_43 (Mmux_value_mux0000_43)
+     MUXF5:I0->O           7   0.321   0.883  Mmux_value_mux0000_2_f5_2 (value_mux0000<3>)
+     LUT4:I0->O            1   0.704   0.000  Mrom_CATHODE_mux000161 (Mrom_CATHODE_mux00016)
+     FDP:D                     0.308          CATHODE_6
+    ----------------------------------------
+    Total                      4.546ns (2.628ns logic, 1.918ns route)
+                                       (57.8% logic, 42.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 100 / 50
+-------------------------------------------------------------------------
+Offset:              5.068ns (Levels of Logic = 2)
+  Source:            S0 (PAD)
+  Destination:       INTREG_0 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: S0 to INTREG_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            26   1.218   1.339  S0_IBUF (S0_OUT_OBUF)
+     LUT3:I1->O           24   0.704   1.252  INTREG_not00011 (INTREG_not0001)
+     FDCE:CE                   0.555          INTREG_0
+    ----------------------------------------
+    Total                      5.068ns (2.477ns logic, 2.591ns route)
+                                       (48.9% logic, 51.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 49 / 31
+-------------------------------------------------------------------------
+Offset:              5.795ns (Levels of Logic = 2)
+  Source:            INTREG_13 (FF)
+  Destination:       LED<3> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: INTREG_13 to LED<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.591   0.808  INTREG_13 (INTREG_13)
+     LUT4:I0->O            1   0.704   0.420  LED_3_and00001 (LED_3_OBUF)
+     OBUF:I->O                 3.272          LED_3_OBUF (LED<3>)
+    ----------------------------------------
+    Total                      5.795ns (4.567ns logic, 1.228ns route)
+                                       (78.8% logic, 21.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLKEN'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            ANODE_3 (FF)
+  Destination:       ANODE<3> (PAD)
+  Source Clock:      CLKEN rising
+
+  Data Path: ANODE_3 to ANODE<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.591   0.420  ANODE_3 (ANODE_3)
+     OBUF:I->O                 3.272          ANODE_3_OBUF (ANODE<3>)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 29 / 29
+-------------------------------------------------------------------------
+Delay:               7.049ns (Levels of Logic = 3)
+  Source:            MR (PAD)
+  Destination:       Q<23> (PAD)
+
+  Data Path: MR to Q<23>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            26   1.218   1.435  MR_IBUF (MR_OUT_OBUF)
+     LUT2:I0->O            1   0.704   0.420  Q<9>1 (Q_9_OBUF)
+     OBUF:I->O                 3.272          Q_9_OBUF (Q<9>)
+    ----------------------------------------
+    Total                      7.049ns (5.194ns logic, 1.855ns route)
+                                       (73.7% logic, 26.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.06 secs
+ 
+--> 
+
+Total memory usage is 134872 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

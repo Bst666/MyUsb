@@ -1,0 +1,70 @@
+NET "CLK" LOC = "B8";
+NET "al_RESET" LOC = "B18";
+
+NET "RDY_FPGA" LOC = "B16"; #FX2 a45
+
+#Test
+NET "ack_test" LOC ="J16";   #cabindoorE
+NET "result_test" LOC="G15"; #cabinledE
+NET "rw_test" LOC="T18";	  #cabinled1	
+NET "req_test" LOC="U18";    #cabindoor1
+#NET "state_out_test<0>" LOC=""; #idle
+#NET "state_out_test<1>" LOC=""; #read1
+#NET "state_out_test<2>" LOC=""; #read2
+#NET "state_out_test<3>" LOC=""; #read3
+#NET "state_out_test<4>" LOC=""; #write1
+#NET "state_out_test<5>" LOC=""; #write2
+#NET "state_out_test<6>" LOC=""; #write3
+#NET "state_out_test<7>" LOC=""; #write4
+#REQ IOB4, p3
+NET "REQ" LOC = "F11";
+
+#ACK  IOB3, p0 
+NET "ACK" LOC = "G9";
+
+#RW IOB4, p4
+NET "RW" LOC = "E12";
+
+#RESULT  IOB3, p1
+NET "RESULT" LOC = "F9";
+
+
+#ADDR IOB4, p0, p1, p2
+#NET "ADDR<0>" LOC = "B11";
+#NET "ADDR<1>" LOC = "C11";
+#NET "ADDR<2>" LOC = "E11";
+
+NET "value<0>" LOC = "A4";
+NET "value<1>" LOC = "C3";
+NET "value<2>" LOC = "C4";
+NET "value<3>" LOC = "B6";
+NET "value<4>" LOC = "D5";
+NET "value<5>" LOC = "C5";
+NET "value<6>" LOC = "F7";
+NET "value<7>" LOC = "E7";
+NET "value<8>" LOC = "A6";
+NET "value<9>" LOC = "C7";
+
+
+#Net ADDR<2> LOC = B11;
+#Net ADDR<1> LOC = C11;
+#Net ADDR<0> LOC = E11;
+
+
+
+#-- 4x 7-Segment-Anzeige/-Segment-Display
+#--------------------------------------------------------------------------------------------------
+#- Steuerung über 4x Anoden
+#NET "SEG_CTRL<0>"            LOC = "F15"; # Bank = 1, Pin name = IO_L19N_1, Type = I/O,       T
+#NET "SEG_CTRL<1>"            LOC = "C18"; # Bank = 1, Pin name = IO_L16N_1/A0, Type = DUAL,   H      4. 3. 2. 1.
+#NET "SEG_CTRL<2>"            LOC = "H17"; # Bank = 1, Pin name = IO_L24P_1/LDC1, Type = DUAL, Z      T  H  Z  E
+#NET "SEG_CTRL<3>"            LOC = "F17"; # Bank = 1, Pin name = IO_L21P_1, Type = I/O,       E
+#- BCD codiertes Byte
+#NET "SEG_value<0>"            LOC = "C17"; # Bank = 1, Pin name = IO_L10P_1, Type = I/O,                        Cathode: dp (Punkt)
+#NET "SEG_value<1>"            LOC = "H14"; # Bank = 1, Pin name = IO_L19P_1, Type = I/O,                        Cathode: g,      a  -
+#NET "SEG_value<2>"            LOC = "J17"; # Bank = 1, Pin name = IO_L23P_1/HDC, Type = DUAL,                   Cathode: f,    f  |   |  b
+#NET "SEG_value<3>"            LOC = "G14"; # Bank = 1, Pin name = IO_L23N_1/LDC0, Type = DUAL,                  Cathode: e,         -  g
+#NET "SEG_value<4>"            LOC = "D16"; # Bank = 1, Pin name = IO_L20P_1, Type = I/O,                        Cathode: d,    e  |   |  c
+#NET "SEG_value<5>"            LOC = "D17"; # Bank = 1, Pin name = IO_L13P_1/A6/RHCLK4/IRDY1, Type = RHCLK/DUAL, Cathode: c,      d  -   .  dp
+#NET "SEG_value<6>"            LOC = "F18"; # Bank = 1, Pin name = IO_L17P_1, Type = I/O,                        Cathode: b
+#NET "SEG_value<7>"            LOC = "L18"; # Bank = 1, Pin name = IO_L24N_1/LDC2, Type = DUAL,                  Cathode: a

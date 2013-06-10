@@ -1,0 +1,155 @@
+##############################################################################
+###
+###  UCF file for A2 (TI3 DT WS11/12)
+###  ================================
+###
+###---------------------------------------------------------------------------
+###
+###  Pinning for ModSys-Board:
+###     Coolrunner with APB/AllPurposeBoard on Connector3
+###  BoardDesign (& Pinning given) by Digital Lab ( ET / Fitz-Volkmann-Wolff )
+###
+###
+###  Code belongs to TI3 DT WS11/12; Informatik ; HAW Hamburg
+###  In case of questions contact: Michael Schäfers
+###---------------------------------------------------------------------------
+
+
+NET "nres"        LOC = "P206"  | IOSTANDARD=LVCMOS33; # nRESET, low active; Coolrunner Board; ROTe Taster 
+NET "clk"         LOC = "P55"   | IOSTANDARD=LVCMOS33; # clk;                Coolrunner Board; GRÜNe Taster ; "select source of clock" <- "single"
+
+
+NET "txdat(3)"    LOC = "P119"  | IOSTANDARD=LVCMOS33; # APB B0 SW3;         All Purpose Board; Schalter (+ GRÜNe LED)
+NET "txdat(2)"    LOC = "P118"  | IOSTANDARD=LVCMOS33; # APB B0 SW2;         All Purpose Board; Schalter (+ GRÜNe LED)
+NET "txdat(1)"    LOC = "P117"  | IOSTANDARD=LVCMOS33; # APB B0 SW1;         All Purpose Board; Schalter (+ GRÜNe LED)
+NET "txdat(0)"    LOC = "P116"  | IOSTANDARD=LVCMOS33; # APB B0 SW0;         All Purpose Board; Schalter (+ GRÜNe LED)
+
+
+NET "ok"          LOC = "P135"  | IOSTANDARD=LVCMOS33; # APB B0 LED4;        All Purpose Board; ROTe LED
+NET "rxdat(3)"    LOC = "P134"  | IOSTANDARD=LVCMOS33; # APB B0 LED3;        All Purpose Board; ROTe LED
+NET "rxdat(2)"    LOC = "P131"  | IOSTANDARD=LVCMOS33; # APB B0 LED2;        All Purpose Board; ROTe LED
+NET "rxdat(1)"    LOC = "P128"  | IOSTANDARD=LVCMOS33; # APB B0 LED1;        All Purpose Board; ROTe LED
+NET "rxdat(0)"    LOC = "P127"  | IOSTANDARD=LVCMOS33; # APB B0 LED0;        All Purpose Board; ROTe LED
+
+
+
+##############################################################################
+##############################################################################
+###
+###  END of ucf file
+###
+###---------------------------------------------------------------------------
+#
+#
+# Template for Coolrunner board
+#              =================
+#
+# NET SYSCLK LOC = P55  | IOSTANDARD=LVCMOS33;  # Diesen Pin immer für Clock verwenden.	
+# NET NRESET LOC = P206 | IOSTANDARD=LVCMOS33;  # Dieser Pin liegt auf der RESET-Taste des Mainboards, Low-aktiv	
+#
+#
+##############################################################################
+##############################################################################
+##############################################################################
+#
+#
+# Template for APB/AllPurposeBoard connected to Connector3
+#              ===                              ==========
+#
+############## INPUTS ##############################    
+#NET APB_B0_SW<0> LOC = P69 | IOSTANDARD=LVCMOS33; # APB_B0_SW<0>
+#NET APB_B0_SW<1> LOC = P70 | IOSTANDARD=LVCMOS33; # APB_B0_SW<1>
+#NET APB_B0_SW<2> LOC = P71 | IOSTANDARD=LVCMOS33; # APB_B0_SW<2>
+#NET APB_B0_SW<3> LOC = P72 | IOSTANDARD=LVCMOS33; # APB_B0_SW<3>
+#NET APB_B0_SW<4> LOC = P73 | IOSTANDARD=LVCMOS33; # APB_B0_SW<4>
+#NET APB_B0_SW<5> LOC = P74 | IOSTANDARD=LVCMOS33; # APB_B0_SW<5>
+#NET APB_B0_SW<6> LOC = P75 | IOSTANDARD=LVCMOS33; # APB_B0_SW<6>
+#NET APB_B0_SW<7> LOC = P76 | IOSTANDARD=LVCMOS33; # APB_B0_SW<7>
+#      
+#NET APB_B1_SW<0> LOC = P58 | IOSTANDARD=LVCMOS33; # APB_B1_SW<0>
+#NET APB_B1_SW<1> LOC = P60 | IOSTANDARD=LVCMOS33; # APB_B1_SW<1>
+#NET APB_B1_SW<2> LOC = P61 | IOSTANDARD=LVCMOS33; # APB_B1_SW<2>
+#NET APB_B1_SW<3> LOC = P62 | IOSTANDARD=LVCMOS33; # APB_B1_SW<3>
+#NET APB_B1_SW<4> LOC = P63 | IOSTANDARD=LVCMOS33; # APB_B1_SW<4>
+#NET APB_B1_SW<5> LOC = P64 | IOSTANDARD=LVCMOS33; # APB_B1_SW<5>
+#NET APB_B1_SW<6> LOC = P65 | IOSTANDARD=LVCMOS33; # APB_B1_SW<6>
+#NET APB_B1_SW<7> LOC = P66 | IOSTANDARD=LVCMOS33; # APB_B1_SW<7>
+#      
+#NET APB_PUSH_BUTTON<0> LOC = P78 | IOSTANDARD=LVCMOS33; # APB_PUSH_BUTTON<0>
+#NET APB_PUSH_BUTTON<1> LOC = P77 | IOSTANDARD=LVCMOS33; # APB_PUSH_BUTTON<1>
+#      
+#NET APB_B_COAX<0> LOC = P46 | IOSTANDARD=LVCMOS33; # APB_B_COAX<0>
+#NET APB_B_COAX<1> LOC = P44 | IOSTANDARD=LVCMOS33; # APB_B_COAX<1>
+#      
+############## OUTPUTS ##############################    
+#NET APB_B0_LD<0> LOC = P80 | IOSTANDARD=LVCMOS33; # APB_B0_LD<0>
+#NET APB_B0_LD<1> LOC = P82 | IOSTANDARD=LVCMOS33; # APB_B0_LD<1>
+#NET APB_B0_LD<2> LOC = P83 | IOSTANDARD=LVCMOS33; # APB_B0_LD<2>
+#NET APB_B0_LD<3> LOC = P84 | IOSTANDARD=LVCMOS33; # APB_B0_LD<3>
+#NET APB_B0_LD<4> LOC = P85 | IOSTANDARD=LVCMOS33; # APB_B0_LD<4>
+#NET APB_B0_LD<5> LOC = P86 | IOSTANDARD=LVCMOS33; # APB_B0_LD<5>
+#NET APB_B0_LD<6> LOC = P87 | IOSTANDARD=LVCMOS33; # APB_B0_LD<6>
+#NET APB_B0_LD<7> LOC = P88 | IOSTANDARD=LVCMOS33; # APB_B0_LD<7>
+#      
+#NET APB_B1_LD<0> LOC = P91 | IOSTANDARD=LVCMOS33; # APB_B1_LD<0>
+#NET APB_B1_LD<1> LOC = P95 | IOSTANDARD=LVCMOS33; # APB_B1_LD<1>
+#NET APB_B1_LD<2> LOC = P97 | IOSTANDARD=LVCMOS33; # APB_B1_LD<2>
+#NET APB_B1_LD<3> LOC = P99 | IOSTANDARD=LVCMOS33; # APB_B1_LD<3>
+#NET APB_B1_LD<4> LOC = P100 | IOSTANDARD=LVCMOS33; # APB_B1_LD<4>
+#NET APB_B1_LD<5> LOC = P101 | IOSTANDARD=LVCMOS33; # APB_B1_LD<5>
+#NET APB_B1_LD<6> LOC = P102 | IOSTANDARD=LVCMOS33; # APB_B1_LD<6>
+#NET APB_B1_LD<7> LOC = P103 | IOSTANDARD=LVCMOS33; # APB_B1_LD<7>
+#
+#
+##############################################################################
+##############################################################################
+##############################################################################
+#
+#
+# Template for APB/AllPurposeBoard connected to Connector4
+#              ===                              ==========
+#
+############## INPUTS ##############################    
+#NET APB_B0_SW<0> LOC = P116 | IOSTANDARD=LVCMOS33; # APB_B0_SW<0>
+#NET APB_B0_SW<1> LOC = P117 | IOSTANDARD=LVCMOS33; # APB_B0_SW<1>
+#NET APB_B0_SW<2> LOC = P118 | IOSTANDARD=LVCMOS33; # APB_B0_SW<2>
+#NET APB_B0_SW<3> LOC = P119 | IOSTANDARD=LVCMOS33; # APB_B0_SW<3>
+#NET APB_B0_SW<4> LOC = P120 | IOSTANDARD=LVCMOS33; # APB_B0_SW<4>
+#NET APB_B0_SW<5> LOC = P121 | IOSTANDARD=LVCMOS33; # APB_B0_SW<5>
+#NET APB_B0_SW<6> LOC = P122 | IOSTANDARD=LVCMOS33; # APB_B0_SW<6>
+#NET APB_B0_SW<7> LOC = P123 | IOSTANDARD=LVCMOS33; # APB_B0_SW<7>
+#      
+#NET APB_B1_SW<0> LOC = P107 | IOSTANDARD=LVCMOS33; # APB_B1_SW<0>
+#NET APB_B1_SW<1> LOC = P108 | IOSTANDARD=LVCMOS33; # APB_B1_SW<1>
+#NET APB_B1_SW<2> LOC = P109 | IOSTANDARD=LVCMOS33; # APB_B1_SW<2>
+#NET APB_B1_SW<3> LOC = P110 | IOSTANDARD=LVCMOS33; # APB_B1_SW<3>
+#NET APB_B1_SW<4> LOC = P111 | IOSTANDARD=LVCMOS33; # APB_B1_SW<4>
+#NET APB_B1_SW<5> LOC = P112 | IOSTANDARD=LVCMOS33; # APB_B1_SW<5>
+#NET APB_B1_SW<6> LOC = P113 | IOSTANDARD=LVCMOS33; # APB_B1_SW<6>
+#NET APB_B1_SW<7> LOC = P114 | IOSTANDARD=LVCMOS33; # APB_B1_SW<7>
+#      
+#NET APB_PUSH_BUTTON<0> LOC = P126 | IOSTANDARD=LVCMOS33; # APB_PUSH_BUTTON<0>
+#NET APB_PUSH_BUTTON<1> LOC = P125 | IOSTANDARD=LVCMOS33; # APB_PUSH_BUTTON<1>
+#      
+#NET APB_B_COAX<0> LOC = not connected
+#NET APB_B_COAX<1> LOC = not connected
+#      
+############## OUTPUTS ##############################    
+#NET APB_B0_LD<0> LOC = P127 | IOSTANDARD=LVCMOS33; # APB_B0_LD<0>
+#NET APB_B0_LD<1> LOC = P128 | IOSTANDARD=LVCMOS33; # APB_B0_LD<1>
+#NET APB_B0_LD<2> LOC = P131 | IOSTANDARD=LVCMOS33; # APB_B0_LD<2>
+#NET APB_B0_LD<3> LOC = P134 | IOSTANDARD=LVCMOS33; # APB_B0_LD<3>
+#NET APB_B0_LD<4> LOC = P135 | IOSTANDARD=LVCMOS33; # APB_B0_LD<4>
+#NET APB_B0_LD<5> LOC = P136 | IOSTANDARD=LVCMOS33; # APB_B0_LD<5>
+#NET APB_B0_LD<6> LOC = P137 | IOSTANDARD=LVCMOS33; # APB_B0_LD<6>
+#NET APB_B0_LD<7> LOC = P138 | IOSTANDARD=LVCMOS33; # APB_B0_LD<7>
+#      
+#NET APB_B1_LD<0> LOC = P140 | IOSTANDARD=LVCMOS33; # APB_B1_LD<0>
+#NET APB_B1_LD<1> LOC = P142 | IOSTANDARD=LVCMOS33; # APB_B1_LD<1>
+#NET APB_B1_LD<2> LOC = P143 | IOSTANDARD=LVCMOS33; # APB_B1_LD<2>
+#NET APB_B1_LD<3> LOC = P144 | IOSTANDARD=LVCMOS33; # APB_B1_LD<3>
+#NET APB_B1_LD<4> LOC = P145 | IOSTANDARD=LVCMOS33; # APB_B1_LD<4>
+#NET APB_B1_LD<5> LOC = P146 | IOSTANDARD=LVCMOS33; # APB_B1_LD<5>
+#NET APB_B1_LD<6> LOC = P147 | IOSTANDARD=LVCMOS33; # APB_B1_LD<6>
+#NET APB_B1_LD<7> LOC = P148 | IOSTANDARD=LVCMOS33; # APB_B1_LD<7>
+

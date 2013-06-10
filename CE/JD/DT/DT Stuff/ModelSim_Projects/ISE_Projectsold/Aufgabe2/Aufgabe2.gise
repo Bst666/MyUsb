@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Aufgabe2.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="DUT.bld"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CHK" xil_pn:name="DUT.chk"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="DUT.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CXT" xil_pn:name="DUT.cxt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="DUT.gyd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_JEDEC" xil_pn:name="DUT.jed"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="DUT.log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="DUT.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MFD" xil_pn:name="DUT.mfd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGA" xil_pn:name="DUT.nga"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="DUT.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="DUT.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="DUT.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="DUT.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PNX" xil_pn:name="DUT.pnx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="DUT.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="DUT.rpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="DUT.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="DUT.syr"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="DUT.tim"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="DUT.tspec"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="DUT.vm6"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="DUT.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="DUT.xst"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="DUT_build.xml"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="DUT_envsettings.html"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="DUT_html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="DUT_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="DUT_pad.csv"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="DUT_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="DUT_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="DUT_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD" xil_pn:name="_impact.cmd"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="_impact.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="netgen"/>
+    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/fit/DUT_timesim.nlf"/>
+    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_SDF" xil_pn:name="netgen/fit/DUT_timesim.sdf"/>
+    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_VHDL" xil_pn:name="netgen/fit/DUT_timesim.vhd"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="toplevel.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="toplevel.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="toplevel.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="toplevel.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="toplevel.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="toplevel_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="toplevel_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="toplevel_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1321892366" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1321892366">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1321892366" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-5944832893024792003" xil_pn:start_ts="1321892366">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1321893825" xil_pn:in_ck="-6717746495951383894" xil_pn:name="TRANEXT_xstsynthesize_xbr" xil_pn:prop_ck="9078868222628303709" xil_pn:start_ts="1321893820">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name=".lso"/>
+      <outfile xil_pn:name="DUT.lso"/>
+      <outfile xil_pn:name="DUT.ngc"/>
+      <outfile xil_pn:name="DUT.ngr"/>
+      <outfile xil_pn:name="DUT.prj"/>
+      <outfile xil_pn:name="DUT.stx"/>
+      <outfile xil_pn:name="DUT.syr"/>
+      <outfile xil_pn:name="DUT.xst"/>
+      <outfile xil_pn:name="DUT_vhdl.prj"/>
+      <outfile xil_pn:name="DUT_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1321892371" xil_pn:in_ck="-2722994806785817063" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="671693577366196983" xil_pn:start_ts="1321892371">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1321893829" xil_pn:in_ck="-3252589719850510836" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-2348776846946213859" xil_pn:start_ts="1321893826">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="DUT.bld"/>
+      <outfile xil_pn:name="DUT.ngd"/>
+      <outfile xil_pn:name="DUT_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1321893839" xil_pn:in_ck="91247724052" xil_pn:name="TRANEXT_vm6File_xbr" xil_pn:prop_ck="-5243023562947381819" xil_pn:start_ts="1321893831">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="DUT.chk"/>
+      <outfile xil_pn:name="DUT.cxt"/>
+      <outfile xil_pn:name="DUT.gyd"/>
+      <outfile xil_pn:name="DUT.log"/>
+      <outfile xil_pn:name="DUT.mfd"/>
+      <outfile xil_pn:name="DUT.nga"/>
+      <outfile xil_pn:name="DUT.pad"/>
+      <outfile xil_pn:name="DUT.pnx"/>
+      <outfile xil_pn:name="DUT.rpt"/>
+      <outfile xil_pn:name="DUT.tim"/>
+      <outfile xil_pn:name="DUT.tspec"/>
+      <outfile xil_pn:name="DUT.vm6"/>
+      <outfile xil_pn:name="DUT.xml"/>
+      <outfile xil_pn:name="DUT_build.xml"/>
+      <outfile xil_pn:name="DUT_html"/>
+      <outfile xil_pn:name="DUT_pad.csv"/>
+    </transform>
+    <transform xil_pn:end_ts="1321893841" xil_pn:in_ck="91247732916" xil_pn:name="TRANEXT_crtProg_xbr" xil_pn:prop_ck="5245363024343" xil_pn:start_ts="1321893840">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="DUT.jed"/>
+    </transform>
+    <transform xil_pn:end_ts="1321893844" xil_pn:in_ck="91247719630" xil_pn:name="TRAN_impactProgrammingTool_CPLD" xil_pn:prop_ck="7996569619189960536" xil_pn:start_ts="1321893844">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_impact.cmd"/>
+      <outfile xil_pn:name="_impact.log"/>
+    </transform>
+    <transform xil_pn:end_ts="1321452964" xil_pn:in_ck="91247719630" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-3223234765801749484" xil_pn:start_ts="1321452963">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1321449541" xil_pn:in_ck="91247732916" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1321449540">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1321449835" xil_pn:in_ck="91247724049" xil_pn:name="TRAN_postFitSimModel" xil_pn:prop_ck="7140707183573221845" xil_pn:start_ts="1321449832">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="netgen"/>
+      <outfile xil_pn:name="netgen/fit/DUT_timesim.nlf"/>
+      <outfile xil_pn:name="netgen/fit/DUT_timesim.sdf"/>
+      <outfile xil_pn:name="netgen/fit/DUT_timesim.vhd"/>
+    </transform>
+  </transforms>
+
+</generated_project>

@@ -1,0 +1,9 @@
+Storage Target: Xilinx Flash/PROM
+Storage Family: Platform Flash
+xcf04s          [4 M]
+FF
+Aufgabe2_DT
+C:\Documents and Settings\aaw251\Desktop\ModelSim_Projects\ISE_Projects\Aufgabe2\
+
+MCS
+No

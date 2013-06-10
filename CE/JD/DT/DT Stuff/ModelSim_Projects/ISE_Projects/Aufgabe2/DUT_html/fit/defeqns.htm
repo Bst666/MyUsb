@@ -1,0 +1,103 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FDCPE_ok: FDCPE port map (ok,ok_D,clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ok_D <= (nres AND p1/sigin_s(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((nres AND p1/sigin_s(1) AND p1/sigin_s(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	p1/sigin_s(3) AND NOT p1/sigok_s)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nres AND p1/sigin_s(1) AND p1/sigin_s(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT p1/sigin_s(3) AND p1/sigok_s)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nres AND p1/sigin_s(1) AND NOT p1/sigin_s(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	p1/sigin_s(3) AND p1/sigok_s)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nres AND p1/sigin_s(1) AND NOT p1/sigin_s(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT p1/sigin_s(3) AND NOT p1/sigok_s)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nres AND NOT p1/sigin_s(1) AND p1/sigin_s(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	p1/sigin_s(3) AND p1/sigok_s)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nres AND NOT p1/sigin_s(1) AND p1/sigin_s(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT p1/sigin_s(3) AND NOT p1/sigok_s)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nres AND NOT p1/sigin_s(1) AND NOT p1/sigin_s(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	p1/sigin_s(3) AND NOT p1/sigok_s)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nres AND NOT p1/sigin_s(1) AND NOT p1/sigin_s(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT p1/sigin_s(3) AND p1/sigok_s));
+</td></tr><tr><td>
+FDCPE_p1/sigin_s0: FDCPE port map (p1/sigin_s(0),p1/sigin_s_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p1/sigin_s_D(0) <= (nres AND sigx_s(0));
+</td></tr><tr><td>
+FDCPE_p1/sigin_s1: FDCPE port map (p1/sigin_s(1),p1/sigin_s_D(1),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p1/sigin_s_D(1) <= (nres AND sigx_s(1));
+</td></tr><tr><td>
+FDCPE_p1/sigin_s2: FDCPE port map (p1/sigin_s(2),p1/sigin_s_D(2),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p1/sigin_s_D(2) <= (nres AND sigx_s(2));
+</td></tr><tr><td>
+FDCPE_p1/sigin_s3: FDCPE port map (p1/sigin_s(3),p1/sigin_s_D(3),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p1/sigin_s_D(3) <= (nres AND sigx_s(3));
+</td></tr><tr><td>
+FDCPE_p1/sigok_s: FDCPE port map (p1/sigok_s,p1/sigok_s_D,clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p1/sigok_s_D <= (nres AND sigx_s(4));
+</td></tr><tr><td>
+FDCPE_p4bit/sigin_s0: FDCPE port map (p4bit/sigin_s(0),p4bit/sigin_s_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p4bit/sigin_s_D(0) <= (nres AND txdat(0));
+</td></tr><tr><td>
+FDCPE_p4bit/sigin_s1: FDCPE port map (p4bit/sigin_s(1),p4bit/sigin_s_D(1),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p4bit/sigin_s_D(1) <= (nres AND txdat(1));
+</td></tr><tr><td>
+FDCPE_p4bit/sigin_s2: FDCPE port map (p4bit/sigin_s(2),p4bit/sigin_s_D(2),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p4bit/sigin_s_D(2) <= (nres AND txdat(2));
+</td></tr><tr><td>
+FDCPE_p4bit/sigin_s3: FDCPE port map (p4bit/sigin_s(3),p4bit/sigin_s_D(3),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p4bit/sigin_s_D(3) <= (nres AND txdat(3));
+</td></tr><tr><td>
+FDCPE_rxdat0: FDCPE port map (rxdat(0),rxdat_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rxdat_D(0) <= (nres AND p1/sigin_s(0));
+</td></tr><tr><td>
+FDCPE_rxdat1: FDCPE port map (rxdat(1),rxdat_D(1),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rxdat_D(1) <= (nres AND p1/sigin_s(1));
+</td></tr><tr><td>
+FDCPE_rxdat2: FDCPE port map (rxdat(2),rxdat_D(2),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rxdat_D(2) <= (nres AND p1/sigin_s(2));
+</td></tr><tr><td>
+FDCPE_rxdat3: FDCPE port map (rxdat(3),rxdat_D(3),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rxdat_D(3) <= (nres AND p1/sigin_s(3));
+</td></tr><tr><td>
+FDCPE_sigx_s0: FDCPE port map (sigx_s(0),sigx_s_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sigx_s_D(0) <= (nres AND p4bit/sigin_s(0));
+</td></tr><tr><td>
+FDCPE_sigx_s1: FDCPE port map (sigx_s(1),sigx_s_D(1),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sigx_s_D(1) <= (nres AND p4bit/sigin_s(1));
+</td></tr><tr><td>
+FDCPE_sigx_s2: FDCPE port map (sigx_s(2),sigx_s_D(2),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sigx_s_D(2) <= (nres AND p4bit/sigin_s(2));
+</td></tr><tr><td>
+FDCPE_sigx_s3: FDCPE port map (sigx_s(3),sigx_s_D(3),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sigx_s_D(3) <= (nres AND p4bit/sigin_s(3));
+</td></tr><tr><td>
+FDCPE_sigx_s4: FDCPE port map (sigx_s(4),sigx_s_D(4),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sigx_s_D(4) <= (nres AND p4bit/sigin_s(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((nres AND p4bit/sigin_s(1) AND p4bit/sigin_s(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT p4bit/sigin_s(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nres AND p4bit/sigin_s(1) AND NOT p4bit/sigin_s(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	p4bit/sigin_s(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nres AND NOT p4bit/sigin_s(1) AND p4bit/sigin_s(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	p4bit/sigin_s(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nres AND NOT p4bit/sigin_s(1) AND NOT p4bit/sigin_s(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT p4bit/sigin_s(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

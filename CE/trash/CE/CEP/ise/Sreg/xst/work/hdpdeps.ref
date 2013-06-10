@@ -1,0 +1,7 @@
+V3 3
+FL //homefs/aax289/CEP/Schieberegister.vhd 2011/10/20.17:30:09 M.81d
+EN work/Schieberegister 1319124519 FL //homefs/aax289/CEP/Schieberegister.vhd \
+      PB ieee/std_logic_1164 1290154108 PB ieee/std_logic_arith 1290154109 \
+      PB ieee/STD_LOGIC_UNSIGNED 1290154110
+AR work/Schieberegister/VERHALTEN 1319124520 \
+      FL //homefs/aax289/CEP/Schieberegister.vhd EN work/Schieberegister 1319124519

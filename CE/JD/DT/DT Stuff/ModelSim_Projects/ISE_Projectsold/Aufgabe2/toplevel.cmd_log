@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/ISE_Projects/Aufgabe2/toplevel.xst" -ofn "D:/ISE_Projects/Aufgabe2/toplevel.syr" 

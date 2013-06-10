@@ -1,0 +1,14 @@
+port 
+in signal taster_zustand 
+out signal taster_losgelassen 
+ 
+lokale größen 
+signal voriger_tasterzustand // wird ein flipflop 
+ 
+process zustand:  
+if clk'event and clk = '1' then // flipflop sei auf rising edge 
+    voriger_tasterzustand <= taster_zustand 
+  fi 
+ 
+process ausgabe:  
+taster_losgelassen <= voriger_tasterzustand and not taster_zustand // ausgang wird bei rising edge für einen takt lang 1

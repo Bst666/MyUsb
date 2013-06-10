@@ -1,0 +1,121 @@
+-- Code belongs to TI3 DT
+-- History:
+--  111005: 1st version for TI3 DT SS11  by Michael Schaefers 
+
+
+
+library work;
+    use work.all;
+
+library ieee;
+    use ieee.std_logic_1164.all;
+    use ieee.std_logic_unsigned.all;                   -- for arc3 only
+
+
+
+entity fa is
+    generic (
+        delayVisualization : time := 1 ns              -- visualization of just some HW delay
+    );
+    port (
+        s  : out std_logic;
+        co : out std_logic;
+        x  : in  std_logic;
+        y  : in  std_logic;
+        ci : in  std_logic
+    );
+end entity fa;
+
+
+
+architecture structure of fa is
+    
+    signal sha1_s : std_logic;
+    signal cha1_s : std_logic;
+    signal cha2_s : std_logic;
+    
+    
+    
+    component ha
+        port(
+            c : out std_logic;
+            s : out std_logic;
+            x : in  std_logic;
+            y : in  std_logic
+        );--]port
+    end component ha;
+    for all : ha use entity work.ha( structure );
+    
+    component or2
+        port(
+            o  : out std_logic;
+            i1 : in  std_logic;
+            i2 : in  std_logic
+        );--]port
+    end component or2;
+    for all : or2 use entity work.or2( arc );
+    
+begin
+    
+    ha_i1 : ha
+        port map (
+            c => cha1_s,
+            s => sha1_s,
+            x => x,
+            y => y
+        )--]port
+    ;--]ha_i1
+    
+    ha_i2 : ha
+        port map (
+            c => cha2_s,
+            s => s,
+            x => sha1_s,
+            y => ci
+        )--]port
+    ;--]ha_i2
+    
+    or2_i : or2
+        port map (
+            o  => co,
+            i1 => cha1_s,
+            i2 => cha2_s
+        )--]port
+    ;--]or2_i
+    
+end architecture structure;
+
+
+
+
+
+architecture arc3 of fa is
+begin
+    
+    logic:
+    process ( x, y, ci ) is
+        variable iv_v : std_logic_vector( 2 downto 0 );  -- INput Vector
+        variable s_v  : std_logic;
+        variable c_v  : std_logic;
+    begin
+        iv_v := x & y & ci;
+        
+        case iv_v is
+            when "000" =>   c_v := '0';  s_v := '0';
+            when "001" =>   c_v := '0';  s_v := '1';
+            when "010" =>   c_v := '0';  s_v := '1';
+            when "011" =>   c_v := '1';  s_v := '0';
+            when "100" =>   c_v := '0';  s_v := '1';
+            when "101" =>   c_v := '1';  s_v := '0';
+            when "110" =>   c_v := '1';  s_v := '0';
+            when others =>  c_v := '1';  s_v := '1';   -- including "111"
+        end case;
+        
+        co  <=  c_v  after delayVisualization;
+        s   <=  s_v  after delayVisualization;
+    end process logic;
+        
+end architecture arc3;
+
+
+

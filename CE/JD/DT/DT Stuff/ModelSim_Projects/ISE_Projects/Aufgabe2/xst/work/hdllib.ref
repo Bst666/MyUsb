@@ -1,0 +1,6 @@
+AR parcheck beh C:/Users/DIPUser/Desktop/ModelSim_Projects/ModelSim_Projects/VHDL_Codes/parcheck.vhd sub00/vhpl05 1322044053
+EN dut NULL C:/Users/DIPUser/Desktop/ModelSim_Projects/ModelSim_Projects/VHDL_Codes/DUT.vhd sub00/vhpl00 1322044054
+AR dut beh C:/Users/DIPUser/Desktop/ModelSim_Projects/ModelSim_Projects/VHDL_Codes/DUT.vhd sub00/vhpl01 1322044055
+EN parcheck NULL C:/Users/DIPUser/Desktop/ModelSim_Projects/ModelSim_Projects/VHDL_Codes/parcheck.vhd sub00/vhpl04 1322044052
+AR parity4bit beh C:/Users/DIPUser/Desktop/ModelSim_Projects/ModelSim_Projects/VHDL_Codes/parity4bit.vhd sub00/vhpl03 1322044051
+EN parity4bit NULL C:/Users/DIPUser/Desktop/ModelSim_Projects/ModelSim_Projects/VHDL_Codes/parity4bit.vhd sub00/vhpl02 1322044050

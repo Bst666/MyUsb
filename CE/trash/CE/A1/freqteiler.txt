@@ -1,0 +1,68 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity F_Split is
+  port( SR_E:   in Bit_vector(23 downto 0);
+        clk:    in Bit;
+        SR_Fs:  out Bit_vector(23 downto 0);
+end F_Split;
+
+architecture frequenzysplit of F_Split is
+
+    --zeuch das frequenz teilt..
+    --
+ 
+signal Q                                    :std_logic_vector(23 downto 0);
+                              
+begin
+  
+  
+clock_prozess: process  (clk) 
+begin 
+    
+                   
+    if CLK='1' and CLK'event then        ------------sync frame--------------
+        if ld_N= '0' then                       --load 1                      --   
+            Q <= TO_STDLOGICVECTOR(d_in);       --load M1                     --
+        else                                    --count 2|hold                --
+            if enp_N = '0' and ent_N = '0' then --enable 5,6                  --
+                if u_d = '0' then               --down 4                      --
+                    Q <= Q - 1 ;                --count down 2,4,5,6          --
+                else                            --up 3                        --
+                    Q <= Q + "0001" ;           --count up 2,3,5,6            --
+                end if;                                                       --
+            else                                --hold                        --                  
+                Q <= Q ;                                                      -- 
+            end if;                                                           --
+        end if;                                                               --
+    end if;                                 ------------------------------------      
+end process;
+  
+  
+
+
+async_carry_prozess: process(Q,u_d,ent_N)
+begin
+    carry <= '1';
+    if res_N='1' and ent_N='0' and ld_N='1' then
+        if (Q = "0000" and u_d = '0') or (Q = "1111" and u_d ='1') then  
+                  --4,5, CT=0                      --3,5, CT=15
+            carry <= '0' ;     
+        else
+            carry <= '1' ;     
+        end if;
+   end if;
+end process;  
+
+
+rco_N <= carry;  
+q_out <= TO_BITVECTOR(Q);        
+end counter;
+      
+
+
+  --  
+    
+end
+  

@@ -1,0 +1,182 @@
+m255
+K3
+13
+cModel Technology
+dZ:\
+T_opt
+VATZF=ojih6Zof?f553@b70
+04 7 7 work clk_div clk_seg 1
+=1-000ffee86545-4e96d68f-1e4-adc
+Z0 o-quiet -auto_acc_if_foreign -work work
+Z1 tExplicit 1
+Z2 OE;O;6.3j;37
+T_opt1
+VkAmMQE=F;ShjjWo2;n<z@0
+04 9 7 work test_b_sr sequenz 1
+=1-000ffee86545-4e96ec00-399-c64
+Z3 o-quiet -auto_acc_if_foreign -work work
+R1
+R2
+T_opt2
+VgeGB;N]RN9`TV7bDKZ;c52
+04 7 7 work tb_7seq sequenz 0
+=1-000ffee86539-4e9c3189-6d-2a4
+R3
+R1
+R2
+Eclk_div
+Z4 w1318859888
+Z5 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z6 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z7 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z8 dZ:\CEP
+Z9 8Z:/CEP/Clk_div.vhd
+Z10 FZ:/CEP/Clk_div.vhd
+l0
+L6
+VMk>PhziF[]CkR;:6Z[06L2
+Z11 OE;C;6.3j;37
+32
+Z12 o-work work -2002 -explicit
+R1
+!s100 6HA>c4BPKjY>EZJIjGflG0
+Aclk_seg
+R5
+R6
+R7
+DEx4 work 7 clk_div 0 22 Mk>PhziF[]CkR;:6Z[06L2
+l17
+L14
+VHhQJfNkm6[Dd^XaaELAI]2
+R11
+32
+Z13 Mx3 4 ieee 14 std_logic_1164
+Z14 Mx2 4 ieee 15 std_logic_arith
+Z15 Mx1 4 ieee 18 std_logic_unsigned
+R12
+R1
+!s100 NKN<O3UFe^17;nT`VhB=E1
+Eschieberegister
+Z16 w1319114477
+R5
+R6
+R7
+R8
+Z17 8Z:/CEP/Schieberegister.vhd
+Z18 FZ:/CEP/Schieberegister.vhd
+l0
+L7
+V5DO96VSz;2aOYGJD@g5:;2
+!s100 IogSCb:73FXk``7KOe[J:1
+R11
+32
+R12
+R1
+Averhalten
+R5
+R6
+R7
+Z19 DEx4 work 15 schieberegister 0 22 5DO96VSz;2aOYGJD@g5:;2
+l29
+L17
+Z20 V;On9PiLljY>:Dzcl76Bh73
+Z21 !s100 :]gZofXH<:cS8HVAORZ4a0
+R11
+32
+R13
+R14
+R15
+R12
+R1
+Esegment_illu
+Z22 w1318858989
+R5
+R6
+R7
+R8
+Z23 8Z:/CEP/Segmentanzeige.vhd
+Z24 FZ:/CEP/Segmentanzeige.vhd
+l0
+L6
+VelTFH:@?^<f5Raa2HJ9WK1
+R11
+32
+R12
+R1
+!s100 ?VfIS1fW_n3GCLEbA_J_71
+Aillustrade
+R5
+R6
+R7
+Z25 DEx4 work 12 segment_illu 0 22 elTFH:@?^<f5Raa2HJ9WK1
+l19
+L17
+V67SOW03gm>WPnNI8af4dm0
+R11
+32
+R13
+R14
+R15
+R12
+R1
+!s100 c@GbUZ6X_L;nziPJL@`T60
+Etb_7seq
+Z26 w1318859274
+R8
+Z27 8Z:/CEP/TB_7seq.vhd
+Z28 FZ:/CEP/TB_7seq.vhd
+l0
+L1
+V?^IBY<VE2no:@N:D3ongX0
+R11
+32
+R12
+R1
+!s100 g@AmhSWN@b8GMbE:83cf]3
+Asequenz
+R5
+R6
+R7
+R25
+DEx4 work 7 tb_7seq 0 22 ?^IBY<VE2no:@N:D3ongX0
+l20
+L5
+VzbnU:<BK>:]3J^[fEn;L51
+R11
+32
+R13
+R14
+R15
+R12
+R1
+!s100 1LTJ06obWj]9@NZh==hNh3
+Etest_b_sr
+Z29 w1318513640
+R8
+Z30 8D:/CE/work/TB_SchiebeReg.vhd
+Z31 FD:/CE/work/TB_SchiebeReg.vhd
+l0
+L1
+V[AzH345Zc<3^e2FYiSh691
+R11
+32
+R12
+R1
+!s100 Jf7CeLEITSb=1e>8l>fg=1
+Asequenz
+R5
+R6
+R7
+DEx4 work 15 schieberegister 0 22 Gm30SVQeS4C?^CR5WjjHO0
+DEx4 work 9 test_b_sr 0 22 [AzH345Zc<3^e2FYiSh691
+l13
+L5
+VDoG38IS]XcL_YFjkS>D530
+R11
+32
+R13
+R14
+R15
+R12
+R1
+!s100 RG^64T[ngj80d3>J3:8=Z0

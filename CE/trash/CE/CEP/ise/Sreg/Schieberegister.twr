@@ -1,0 +1,146 @@
+--------------------------------------------------------------------------------
+Release 12.4 Trace  (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\12.4\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml Schieberegister.twx Schieberegister.ncd -o
+Schieberegister.twr Schieberegister.pcf
+
+Design file:              Schieberegister.ncd
+Physical constraint file: Schieberegister.pcf
+Device,package,speed:     xc3s1200e,fg320,-4 (PRODUCTION 1.27 2010-11-18)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+CLKIN       |    1.707(R)|   -0.110(R)|CLK_BUFGP         |   0.000|
+D0          |    0.999(R)|    0.459(R)|CLK_BUFGP         |   0.000|
+D23         |    1.382(R)|    0.152(R)|CLK_BUFGP         |   0.000|
+S0          |    3.309(R)|    0.636(R)|CLK_BUFGP         |   0.000|
+S1          |    2.847(R)|    0.975(R)|CLK_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock CLK to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+CLKENIN_OUT |    7.657(R)|CLK_BUFGP         |   0.000|
+LED<0>      |   10.620(R)|CLK_BUFGP         |   0.000|
+LED<1>      |    9.383(R)|CLK_BUFGP         |   0.000|
+LED<2>      |    9.581(R)|CLK_BUFGP         |   0.000|
+LED<3>      |    9.328(R)|CLK_BUFGP         |   0.000|
+LED<4>      |   10.387(R)|CLK_BUFGP         |   0.000|
+LED<5>      |    9.916(R)|CLK_BUFGP         |   0.000|
+Q<0>        |    9.917(R)|CLK_BUFGP         |   0.000|
+Q<1>        |   10.476(R)|CLK_BUFGP         |   0.000|
+Q<2>        |   11.177(R)|CLK_BUFGP         |   0.000|
+Q<3>        |    9.456(R)|CLK_BUFGP         |   0.000|
+Q<4>        |    9.979(R)|CLK_BUFGP         |   0.000|
+Q<5>        |   10.176(R)|CLK_BUFGP         |   0.000|
+Q<6>        |   10.621(R)|CLK_BUFGP         |   0.000|
+Q<7>        |    9.976(R)|CLK_BUFGP         |   0.000|
+Q<8>        |    8.788(R)|CLK_BUFGP         |   0.000|
+Q<9>        |    9.912(R)|CLK_BUFGP         |   0.000|
+Q<10>       |   10.660(R)|CLK_BUFGP         |   0.000|
+Q<11>       |   10.529(R)|CLK_BUFGP         |   0.000|
+Q<12>       |   10.299(R)|CLK_BUFGP         |   0.000|
+Q<13>       |    9.860(R)|CLK_BUFGP         |   0.000|
+Q<14>       |   10.571(R)|CLK_BUFGP         |   0.000|
+Q<15>       |    8.965(R)|CLK_BUFGP         |   0.000|
+Q<16>       |    9.402(R)|CLK_BUFGP         |   0.000|
+Q<17>       |    9.027(R)|CLK_BUFGP         |   0.000|
+Q<18>       |    8.691(R)|CLK_BUFGP         |   0.000|
+Q<19>       |    9.254(R)|CLK_BUFGP         |   0.000|
+Q<20>       |    8.796(R)|CLK_BUFGP         |   0.000|
+Q<21>       |    9.107(R)|CLK_BUFGP         |   0.000|
+Q<22>       |    8.658(R)|CLK_BUFGP         |   0.000|
+Q<23>       |   10.035(R)|CLK_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    4.579|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+D0             |D0_OUT         |    6.524|
+D23            |D23_OUT        |    7.057|
+MR             |MR_OUT         |    5.619|
+MR             |Q<0>           |    8.972|
+MR             |Q<1>           |   10.106|
+MR             |Q<2>           |   10.944|
+MR             |Q<3>           |    9.785|
+MR             |Q<4>           |    8.895|
+MR             |Q<5>           |    8.895|
+MR             |Q<6>           |    9.365|
+MR             |Q<7>           |    8.221|
+MR             |Q<8>           |    7.879|
+MR             |Q<9>           |    8.760|
+MR             |Q<10>          |   10.022|
+MR             |Q<11>          |   10.727|
+MR             |Q<12>          |   10.247|
+MR             |Q<13>          |    9.003|
+MR             |Q<14>          |   10.130|
+MR             |Q<15>          |    8.890|
+MR             |Q<16>          |    8.069|
+MR             |Q<17>          |    8.098|
+MR             |Q<18>          |    7.310|
+MR             |Q<19>          |    8.307|
+MR             |Q<20>          |    8.489|
+MR             |Q<21>          |    7.258|
+MR             |Q<22>          |    7.024|
+MR             |Q<23>          |    7.534|
+S0             |S0_OUT         |    6.268|
+S1             |S1_OUT         |    6.575|
+---------------+---------------+---------+
+
+
+Analysis completed Thu Oct 20 17:30:05 2011 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 102 MB
+
+
+

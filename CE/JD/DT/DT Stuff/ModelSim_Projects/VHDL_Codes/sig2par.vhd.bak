@@ -1,0 +1,66 @@
+
+library work;
+    use work.all;
+    
+library ieee;
+    use ieee.std_logic_1164.all;
+
+
+
+entity sig2par is
+        PORT(
+        sigin: IN std_logic_vector(3 downto 0);
+        sigout: OUT std_logic_vector(4 downto 0)      
+        );
+end entity sig2par;
+
+
+
+architecture beh of sig2par is
+    
+    signal x1_s : std_logic;
+    signal x2_s : std_logic;
+    signal x3_s : std_logic;
+    signal x4_s : std_logic;
+    signal o : std_logic;
+    
+    component parity
+        PORT(
+        x1: IN std_logic;
+        x2: IN std_logic;
+        x3: IN std_logic;
+        x4: IN std_logic;
+        o1: OUT std_logic        
+        );
+    end component parity;
+    for all : parity use entity work.parity( paritygen );
+    
+begin
+    
+    parity_i : parity
+        port map (
+            x1 => x1_s,
+            x2 => x2_s,
+            x3 => x3_s,
+            x4 => x4_s,
+            o1 => o
+        );
+        
+    connect:
+    PROCESS(sigin)
+       BEGIN
+                   
+        --sigin(0) => x1_s;
+        --sigin(1) => x2_s;
+        --sigin(2) => x3_s;
+        --sigin(3) => x4_s;
+        
+        sigout(0) <= sigin(0);
+        sigout(1) <= sigin(1);
+        sigout(2) <= sigin(2);
+        sigout(3) <= sigin(3);
+        sigout(4) <= o;
+        
+    END PROCESS connect;
+    
+end architecture beh;

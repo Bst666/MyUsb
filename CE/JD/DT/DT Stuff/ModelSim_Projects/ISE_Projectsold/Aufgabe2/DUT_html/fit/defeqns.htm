@@ -1,0 +1,86 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FDCPE_ok: FDCPE port map (ok,ok_D,clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ok_D <= (nres AND p1/ok_s);
+</td></tr><tr><td>
+FDCPE_p1/ok_s: FDCPE port map (p1/ok_s,p1/ok_s_D,clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p1/ok_s_D <= sigx_s(0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((sigx_s(1) AND sigx_s(2) AND sigx_s(3) AND NOT sigx_s(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sigx_s(1) AND sigx_s(2) AND NOT sigx_s(3) AND sigx_s(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sigx_s(1) AND NOT sigx_s(2) AND sigx_s(3) AND sigx_s(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sigx_s(1) AND NOT sigx_s(2) AND NOT sigx_s(3) AND NOT sigx_s(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sigx_s(1) AND sigx_s(2) AND sigx_s(3) AND sigx_s(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sigx_s(1) AND sigx_s(2) AND NOT sigx_s(3) AND NOT sigx_s(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sigx_s(1) AND NOT sigx_s(2) AND sigx_s(3) AND NOT sigx_s(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sigx_s(1) AND NOT sigx_s(2) AND NOT sigx_s(3) AND sigx_s(4)));
+</td></tr><tr><td>
+FDCPE_p1/siginres0: FDCPE port map (p1/siginres(0),sigx_s(0),clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_p1/siginres1: FDCPE port map (p1/siginres(1),sigx_s(1),clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_p1/siginres2: FDCPE port map (p1/siginres(2),sigx_s(2),clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_p1/siginres3: FDCPE port map (p1/siginres(3),sigx_s(3),clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_p4bit/sigin_s0: FDCPE port map (p4bit/sigin_s(0),txdat(0),clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_p4bit/sigin_s1: FDCPE port map (p4bit/sigin_s(1),txdat(1),clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_p4bit/sigin_s2: FDCPE port map (p4bit/sigin_s(2),txdat(2),clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_p4bit/sigin_s3: FDCPE port map (p4bit/sigin_s(3),txdat(3),clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_p4bit/sigin_s4: FDCPE port map (p4bit/sigin_s(4),p4bit/sigin_s_D(4),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p4bit/sigin_s_D(4) <= txdat(3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((txdat(2) AND txdat(1) AND NOT txdat(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (txdat(2) AND NOT txdat(1) AND txdat(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT txdat(2) AND txdat(1) AND txdat(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT txdat(2) AND NOT txdat(1) AND NOT txdat(0)));
+</td></tr><tr><td>
+FDCPE_rxdat0: FDCPE port map (rxdat(0),rxdat_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rxdat_D(0) <= (nres AND p1/siginres(0));
+</td></tr><tr><td>
+FDCPE_rxdat1: FDCPE port map (rxdat(1),rxdat_D(1),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rxdat_D(1) <= (nres AND p1/siginres(1));
+</td></tr><tr><td>
+FDCPE_rxdat2: FDCPE port map (rxdat(2),rxdat_D(2),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rxdat_D(2) <= (nres AND p1/siginres(2));
+</td></tr><tr><td>
+FDCPE_rxdat3: FDCPE port map (rxdat(3),rxdat_D(3),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rxdat_D(3) <= (nres AND p1/siginres(3));
+</td></tr><tr><td>
+FDCPE_sigx_s0: FDCPE port map (sigx_s(0),sigx_s_D(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sigx_s_D(0) <= (nres AND p4bit/sigin_s(0));
+</td></tr><tr><td>
+FDCPE_sigx_s1: FDCPE port map (sigx_s(1),sigx_s_D(1),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sigx_s_D(1) <= (nres AND p4bit/sigin_s(1));
+</td></tr><tr><td>
+FDCPE_sigx_s2: FDCPE port map (sigx_s(2),sigx_s_D(2),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sigx_s_D(2) <= (nres AND p4bit/sigin_s(2));
+</td></tr><tr><td>
+FDCPE_sigx_s3: FDCPE port map (sigx_s(3),sigx_s_D(3),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sigx_s_D(3) <= (nres AND p4bit/sigin_s(3));
+</td></tr><tr><td>
+FDCPE_sigx_s4: FDCPE port map (sigx_s(4),sigx_s_D(4),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sigx_s_D(4) <= (nres AND p4bit/sigin_s(4));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

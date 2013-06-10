@@ -1,0 +1,42 @@
+# clock pin for Nexys 2 Board
+NET "clk"   LOC = "B8"; 
+# 7 segment display
+NET "Cathode<7>" LOC = "L18";
+NET "Cathode<6>" LOC = "F18";
+NET "Cathode<5>" LOC = "D17";
+NET "Cathode<4>" LOC = "D16";
+NET "Cathode<3>" LOC = "G14";
+NET "Cathode<2>" LOC = "J17";
+NET "Cathode<1>" LOC = "H14";
+NET "Cathode<0>" LOC = "C17";
+NET "ANODE<0>" LOC = "F17";
+NET "ANODE<1>" LOC = "H17";
+NET "ANODE<2>" LOC = "C18";
+NET "ANODE<3>" LOC = "F15";
+
+
+# Fahrstuhlbord
+NET "MR_OUT" LOC = "G13";
+NET "CLKENIN_OUT" LOC = "H16";
+NET "S0_OUT" LOC = "H15";
+NET "S1_OUT" LOC = "F14";
+NET "D0_OUT" LOC = "G16";
+NET "D23_OUT" LOC = "J12";
+
+# Switches
+
+NET "MR" LOC = "G18";
+NET "CLKIN" LOC = "B18"; 
+NET "S0" LOC = "L14";
+NET "S1" LOC = "L13";
+NET "D0" LOC = "N17";
+NET "D23" LOC = "R17";
+
+#LEDS
+
+NET "LED<0>" LOC = "J14";
+NET "LED<1>" LOC = "J15";
+NET "LED<2>" LOC = "K15";
+NET "LED<3>" LOC = "K14";
+NET "LED<4>" LOC = "E16";
+NET "LED<5>" LOC = "P16";

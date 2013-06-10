@@ -1,0 +1,9 @@
+Storage Target: Xilinx Flash/PROM
+Storage Family: Platform Flash
+xcf04s          [4 M]
+FF
+aufgabe2
+D:\ISE_Projects\
+
+MCS
+No

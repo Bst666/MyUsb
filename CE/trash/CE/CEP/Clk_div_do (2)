@@ -1,0 +1,12 @@
+add wave clk;
+add wave mr;
+add wave clk_7seg;
+add wave counter;
+
+force mr 0;
+run 20 ns;
+force mr 1;
+
+force clk 0 0 ,1 10ns -r 20 ns;
+
+run 100000000ns;

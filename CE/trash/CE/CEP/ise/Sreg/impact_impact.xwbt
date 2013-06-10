@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=Z:\CEP\ise\Sreg\impact.xsl
+OUTFILE=Z:\CEP\ise\Sreg\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=Z:\CEP\ise\Sreg
+LICENSE=iMPACT
+USER_INFO=iMPACT
